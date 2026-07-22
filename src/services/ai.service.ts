@@ -182,18 +182,35 @@ export class AIService {
     this.activeProvider = id;
   }
 
-  private getProvider(): AIProvider {
-    const provider = this.providers.get(this.activeProvider);
-    if (!provider) throw new Error(`Active provider ${this.activeProvider} not found`);
-    return provider;
+  hasProviders(): boolean {
+    return this.providers.size > 0;
+  }
+
+  private getProvider(): AIProvider | null {
+    // Try active provider first
+    const active = this.providers.get(this.activeProvider);
+    if (active) return active;
+    // Fall back to any available provider
+    for (const provider of this.providers.values()) {
+      return provider;
+    }
+    return null;
   }
 
   async generate(prompt: string, options?: AIGenerateOptions): Promise<AIResponse> {
-    return this.getProvider().generateText(prompt, options);
+    const provider = this.getProvider();
+    if (!provider) {
+      throw new Error("No AI providers available");
+    }
+    return provider.generateText(prompt, options);
   }
 
   async embed(text: string): Promise<number[]> {
-    return this.getProvider().generateEmbedding(text);
+    const provider = this.getProvider();
+    if (!provider) {
+      throw new Error("No AI providers available for embeddings");
+    }
+    return provider.generateEmbedding(text);
   }
 
   // Scholarship-specific AI methods
@@ -210,7 +227,12 @@ ${scholarships.map((s, i) => `${i + 1}. [${s.id}] ${s.title}: ${s.description}. 
 
 Return a JSON array with objects containing: id, score (0-100), reasons (array of strings). Return only valid JSON.`;
 
-    const response = await this.generate(prompt, {
+    const provider = this.getProvider();
+    if (!provider) {
+      return scholarships.map((s) => ({ id: s.id, score: 50, reasons: ["No AI provider available"] }));
+    }
+
+    const response = await provider.generateText(prompt, {
       temperature: 0.3,
       systemPrompt: "You are a scholarship matching AI. Return only valid JSON arrays.",
     });
@@ -233,7 +255,12 @@ Benefits: ${Array.isArray(scholarship.benefits) ? scholarship.benefits.join(", "
 
 Focus on what makes this opportunity unique and valuable.`;
 
-    const response = await this.generate(prompt, { temperature: 0.5, maxTokens: 200 });
+    const provider = this.getProvider();
+    if (!provider) {
+      return `${scholarship.title} is a ${scholarship.funding} scholarship at ${scholarship.universityName} in ${scholarship.country}.`;
+    }
+
+    const response = await provider.generateText(prompt, { temperature: 0.5, maxTokens: 200 });
     return response.text;
   }
 
@@ -253,7 +280,12 @@ Student Profile:
 
 Provide a clear, encouraging explanation.`;
 
-    const response = await this.generate(prompt, { temperature: 0.6 });
+    const provider = this.getProvider();
+    if (!provider) {
+      return `Requirements: ${requirements.join(", ")}. Please check the scholarship page for detailed eligibility criteria.`;
+    }
+
+    const response = await provider.generateText(prompt, { temperature: 0.6 });
     return response.text;
   }
 }
