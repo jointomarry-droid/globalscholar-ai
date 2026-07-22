@@ -22,12 +22,9 @@ import {
   Calendar,
   Lightbulb,
   Rocket,
-  Target,
-  Award,
+  Briefcase,
   Globe2,
   FlaskConical,
-  LineChart,
-  Briefcase,
 } from "lucide-react";
 
 export default function HomePage() {
@@ -89,32 +86,11 @@ export default function HomePage() {
       color: "from-green-500 to-teal-600",
     },
     {
-      icon: Target,
-      title: t("ai.career.title"),
-      description: t("ai.career.description"),
-      href: "/ai/career",
-      color: "from-orange-500 to-red-600",
-    },
-    {
-      icon: LineChart,
-      title: t("ai.calculator.title"),
-      description: t("ai.calculator.description"),
-      href: "/ai/calculator",
+      icon: Sparkles,
+      title: t("ai.search.title"),
+      description: t("ai.search.description"),
+      href: "/ai-search",
       color: "from-purple-500 to-pink-600",
-    },
-    {
-      icon: FlaskConical,
-      title: t("ai.research.title"),
-      description: t("ai.research.description"),
-      href: "/ai/research",
-      color: "from-cyan-500 to-blue-600",
-    },
-    {
-      icon: Globe2,
-      title: t("ai.universityPredictor.title"),
-      description: t("ai.universityPredictor.description"),
-      href: "/ai/university-predictor",
-      color: "from-indigo-500 to-violet-600",
     },
   ];
 

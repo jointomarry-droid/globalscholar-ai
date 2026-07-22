@@ -7,24 +7,11 @@ import { useI18n } from "@/lib/i18n/context";
 import {
   Brain,
   FileText,
-  Target,
-  LineChart,
-  FlaskConical,
-  Globe2,
-  Search,
   Sparkles,
   ArrowRight,
   Zap,
-  Calculator,
-  BarChart3,
-  BookOpen,
-  GraduationCap,
-  Lightbulb,
-  TrendingUp,
-  Users,
-  Award,
-  CheckCircle,
-  AlertCircle,
+  Search,
+  Globe,
 } from "lucide-react";
 
 const aiTools = [
@@ -49,87 +36,21 @@ const aiTools = [
     popular: true,
   },
   {
-    id: "career",
-    icon: Target,
-    titleKey: "ai.tools.career.title",
-    descKey: "ai.tools.career.description",
-    featuresKey: "ai.tools.career.features",
-    href: "/ai/career",
-    color: "from-orange-500 to-red-600",
-    popular: false,
-  },
-  {
-    id: "calculator",
-    icon: LineChart,
-    titleKey: "ai.tools.calculator.title",
-    descKey: "ai.tools.calculator.description",
-    featuresKey: "ai.tools.calculator.features",
-    href: "/ai/calculator",
+    id: "search",
+    icon: Sparkles,
+    titleKey: "ai.search.title",
+    descKey: "ai.search.description",
+    featuresKey: "ai.search.title",
+    href: "/ai-search",
     color: "from-purple-500 to-pink-600",
     popular: true,
-  },
-  {
-    id: "research",
-    icon: FlaskConical,
-    titleKey: "ai.tools.researchMatcher.title",
-    descKey: "ai.tools.researchMatcher.description",
-    featuresKey: "ai.tools.researchMatcher.features",
-    href: "/ai/research",
-    color: "from-cyan-500 to-blue-600",
-    popular: false,
-  },
-  {
-    id: "university-predictor",
-    icon: Globe2,
-    titleKey: "ai.tools.universityPredictor.title",
-    descKey: "ai.tools.universityPredictor.description",
-    featuresKey: "ai.tools.universityPredictor.features",
-    href: "/ai/university-predictor",
-    color: "from-indigo-500 to-violet-600",
-    popular: false,
-  },
-  {
-    id: "essay-writer",
-    icon: BookOpen,
-    titleKey: "ai.tools.essayWriter.title",
-    descKey: "ai.tools.essayWriter.description",
-    featuresKey: "ai.tools.essayWriter.features",
-    href: "/ai/essay-writer",
-    color: "from-rose-500 to-orange-600",
-    popular: true,
-  },
-  {
-    id: "visa-helper",
-    icon: GraduationCap,
-    titleKey: "ai.tools.visaAssistant.title",
-    descKey: "ai.tools.visaAssistant.description",
-    featuresKey: "ai.tools.visaAssistant.features",
-    href: "/ai/visa-assistant",
-    color: "from-emerald-500 to-cyan-600",
-    popular: false,
-  },
-  {
-    id: "cost-calculator",
-    icon: Calculator,
-    titleKey: "ai.tools.costCalculator.title",
-    descKey: "ai.tools.costCalculator.description",
-    featuresKey: "ai.tools.costCalculator.features",
-    href: "/ai/cost-calculator",
-    color: "from-amber-500 to-orange-600",
-    popular: false,
   },
 ];
 
 const toolDetails: Record<string, { title: string; description: string; features: string[] }> = {
   matcher: { title: "AI Scholarship Matcher", description: "Our advanced AI scans 500,000+ scholarships worldwide and ranks them by compatibility with your unique profile, academic record, and career goals.", features: ["Profile analysis", "95% match accuracy", "Real-time updates", "Personalized ranking"] },
   documents: { title: "AI Document Analyzer", description: "Upload your SOP, CV, or essays and get instant AI feedback on content, structure, grammar, and alignment with scholarship requirements.", features: ["Instant feedback", "Grammar check", "Content scoring", "Improvement suggestions"] },
-  career: { title: "AI Career Predictor", description: "Based on your field of study and scholarship choices, predict your career trajectory, salary expectations, and job market demand worldwide.", features: ["Salary prediction", "Job market analysis", "Career path mapping", "Industry trends"] },
-  calculator: { title: "AI Success Calculator", description: "Calculate your chances of getting selected for specific scholarships based on historical data, competitor analysis, and application trends.", features: ["Probability scoring", "Competitor analysis", "Historical data", "Improvement tips"] },
-  research: { title: "AI Research Matcher", description: "Find research supervisors, labs, and funding opportunities that align with your research interests, methodology, and publication goals.", features: ["Supervisor matching", "Lab discovery", "Funding alerts", "Collaboration opportunities"] },
-  "university-predictor": { title: "AI University Predictor", description: "Get AI-predicted acceptance rates, program rankings, and scholarship availability for universities based on your profile.", features: ["Acceptance prediction", "Program rankings", "Cost analysis", "Location insights"] },
-  "essay-writer": { title: "AI Essay Writer", description: "Generate personalized SOPs, cover letters, and scholarship essays with our AI writer that adapts to each scholarship's requirements.", features: ["Template generation", "Tone customization", "Length optimization", "Plagiarism-free"] },
-  "visa-helper": { title: "AI Visa Assistant", description: "Get step-by-step visa guidance, document checklists, and interview preparation for your study abroad destination.", features: ["Document checklist", "Interview prep", "Timeline planning", "Country-specific guides"] },
-  "cost-calculator": { title: "AI Cost Calculator", description: "Calculate total cost of education including tuition, living expenses, travel, and insurance for any country.", features: ["Living cost estimates", "Currency conversion", "Budget planning", "Scholarship offset"] },
+  search: { title: "AI-Powered Search", description: "Ask our AI anything about scholarships, universities, and study abroad. Get personalized answers powered by DeepSeek AI.", features: ["Natural language search", "Personalized results", "Real-time answers", "Scholarship matching"] },
 };
 
 export default function AIToolsPage() {
@@ -248,12 +169,11 @@ export default function AIToolsPage() {
             </p>
           </div>
 
-          <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
+          <div className="grid sm:grid-cols-3 gap-6">
             {[
-              { step: "01", titleKey: "ai.tools.steps.dataCollection", descKey: "ai.tools.steps.dataCollectionDesc", icon: BarChart3 },
+              { step: "01", titleKey: "ai.tools.steps.dataCollection", descKey: "ai.tools.steps.dataCollectionDesc", icon: Search },
               { step: "02", titleKey: "ai.tools.steps.aiAnalysis", descKey: "ai.tools.steps.aiAnalysisDesc", icon: Brain },
-              { step: "03", titleKey: "ai.tools.steps.smartMatching", descKey: "ai.tools.steps.smartMatchingDesc", icon: Target },
-              { step: "04", titleKey: "ai.tools.steps.continuousLearning", descKey: "ai.tools.steps.continuousLearningDesc", icon: TrendingUp },
+              { step: "03", titleKey: "ai.tools.steps.smartMatching", descKey: "ai.tools.steps.smartMatchingDesc", icon: Sparkles },
             ].map((item) => (
               <div key={item.step} className="text-center p-6">
                 <div className="text-3xl font-bold text-[var(--primary)] mb-3">{item.step}</div>
@@ -271,12 +191,11 @@ export default function AIToolsPage() {
       {/* Stats */}
       <section className="py-16 sm:py-20">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-          <div className="grid grid-cols-2 lg:grid-cols-4 gap-6">
+          <div className="grid grid-cols-2 lg:grid-cols-3 gap-6">
             {[
-              { labelKey: "ai.tools.stats.scholarshipsAnalyzed", value: "500,000+", icon: BookOpen },
-              { labelKey: "ai.tools.stats.studentsMatched", value: "2M+", icon: Users },
-              { labelKey: "ai.tools.stats.successRate", value: "95%", icon: Award },
-              { labelKey: "ai.tools.stats.countriesCovered", value: "200+", icon: Globe2 },
+              { labelKey: "ai.tools.stats.scholarshipsAnalyzed", value: "500,000+", icon: Brain },
+              { labelKey: "ai.tools.stats.successRate", value: "95%", icon: Sparkles },
+              { labelKey: "ai.tools.stats.countriesCovered", value: "200+", icon: Globe },
             ].map((stat) => (
               <div key={stat.labelKey} className="text-center p-6 rounded-xl bg-[var(--card)] border">
                 <stat.icon className="h-8 w-8 text-[var(--primary)] mx-auto mb-3" />

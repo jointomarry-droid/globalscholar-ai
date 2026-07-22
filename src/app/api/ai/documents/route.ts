@@ -1,4 +1,5 @@
 import { NextResponse } from "next/server";
+import { getAIService } from "@/services/ai.service";
 
 // AI Document Generation Hub
 // Generates SOP, LOR, CV, Motivation Letters, Research Proposals
@@ -226,35 +227,18 @@ export async function POST(request: Request) {
 
     const prompt = generateDocumentPrompt(body);
 
-    // Try OpenRouter first, then fallback to a template-based generation
+    // Try AI service (DeepSeek/OpenAI/OpenRouter), then fallback to template
     let content: string;
+    const aiService = getAIService();
 
-    if (process.env.OPENROUTER_API_KEY) {
+    if (aiService.hasProviders()) {
       try {
-        const aiResponse = await fetch("https://openrouter.ai/api/v1/chat/completions", {
-          method: "POST",
-          headers: {
-            Authorization: `Bearer ${process.env.OPENROUTER_API_KEY}`,
-            "Content-Type": "application/json",
-            "HTTP-Referer": process.env.NEXT_PUBLIC_APP_URL || "https://globalscholar.ai",
-          },
-          body: JSON.stringify({
-            model: "anthropic/claude-sonnet-4",
-            messages: [
-              { role: "system", content: template.systemPrompt },
-              { role: "user", content: prompt },
-            ],
-            max_tokens: 4000,
-            temperature: 0.7,
-          }),
+        const response = await aiService.generate(prompt, {
+          systemPrompt: template.systemPrompt,
+          temperature: 0.7,
+          maxTokens: 4096,
         });
-
-        if (aiResponse.ok) {
-          const aiData = await aiResponse.json();
-          content = aiData.choices[0]?.message?.content || generateFallbackDocument(body);
-        } else {
-          content = generateFallbackDocument(body);
-        }
+        content = response.text;
       } catch {
         content = generateFallbackDocument(body);
       }

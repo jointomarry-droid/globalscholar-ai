@@ -164,6 +164,142 @@ export class OllamaProvider implements AIProvider {
   }
 }
 
+// DeepSeek Provider (affordable, fast, great for scholarship matching)
+export class DeepSeekProvider implements AIProvider {
+  id = "deepseek";
+  name = "DeepSeek";
+  private apiKey: string;
+  private baseUrl = "https://api.deepseek.com/v1";
+  private model: string;
+
+  constructor(apiKey: string, model = "deepseek-chat") {
+    this.apiKey = apiKey;
+    this.model = model;
+  }
+
+  async generateText(prompt: string, options?: AIGenerateOptions): Promise<AIResponse> {
+    const response = await fetch(`${this.baseUrl}/chat/completions`, {
+      method: "POST",
+      headers: {
+        Authorization: `Bearer ${this.apiKey}`,
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify({
+        model: this.model,
+        messages: [
+          ...(options?.systemPrompt
+            ? [{ role: "system", content: options.systemPrompt }]
+            : []),
+          { role: "user", content: prompt },
+        ],
+        temperature: options?.temperature ?? 0.7,
+        max_tokens: options?.maxTokens ?? 4096,
+      }),
+    });
+
+    if (!response.ok) throw new Error(`DeepSeek request failed: ${response.statusText}`);
+
+    const data = await response.json();
+    return {
+      text: data.choices[0].message.content,
+      tokensUsed: data.usage?.total_tokens ?? 0,
+      provider: this.id,
+      model: data.model,
+    };
+  }
+
+  async generateEmbedding(text: string): Promise<number[]> {
+    // DeepSeek doesn't have a dedicated embedding endpoint, use OpenRouter fallback
+    throw new Error("DeepSeek embeddings not supported, use OpenRouter");
+  }
+
+  async isAvailable(): Promise<boolean> {
+    try {
+      const response = await fetch(`${this.baseUrl}/models`, {
+        headers: { Authorization: `Bearer ${this.apiKey}` },
+      });
+      return response.ok;
+    } catch {
+      return false;
+    }
+  }
+}
+
+// OpenAI Provider (direct)
+export class OpenAIProvider implements AIProvider {
+  id = "openai";
+  name = "OpenAI";
+  private apiKey: string;
+  private baseUrl = "https://api.openai.com/v1";
+  private model: string;
+
+  constructor(apiKey: string, model = "gpt-4o-mini") {
+    this.apiKey = apiKey;
+    this.model = model;
+  }
+
+  async generateText(prompt: string, options?: AIGenerateOptions): Promise<AIResponse> {
+    const response = await fetch(`${this.baseUrl}/chat/completions`, {
+      method: "POST",
+      headers: {
+        Authorization: `Bearer ${this.apiKey}`,
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify({
+        model: this.model,
+        messages: [
+          ...(options?.systemPrompt
+            ? [{ role: "system", content: options.systemPrompt }]
+            : []),
+          { role: "user", content: prompt },
+        ],
+        temperature: options?.temperature ?? 0.7,
+        max_tokens: options?.maxTokens ?? 4096,
+      }),
+    });
+
+    if (!response.ok) throw new Error(`OpenAI request failed: ${response.statusText}`);
+
+    const data = await response.json();
+    return {
+      text: data.choices[0].message.content,
+      tokensUsed: data.usage?.total_tokens ?? 0,
+      provider: this.id,
+      model: data.model,
+    };
+  }
+
+  async generateEmbedding(text: string): Promise<number[]> {
+    const response = await fetch(`${this.baseUrl}/embeddings`, {
+      method: "POST",
+      headers: {
+        Authorization: `Bearer ${this.apiKey}`,
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify({
+        model: "text-embedding-3-small",
+        input: text,
+      }),
+    });
+
+    if (!response.ok) throw new Error(`OpenAI embedding failed: ${response.statusText}`);
+
+    const data = await response.json();
+    return data.data[0].embedding;
+  }
+
+  async isAvailable(): Promise<boolean> {
+    try {
+      const response = await fetch(`${this.baseUrl}/models`, {
+        headers: { Authorization: `Bearer ${this.apiKey}` },
+      });
+      return response.ok;
+    } catch {
+      return false;
+    }
+  }
+}
+
 // AI Service - Main Interface
 export class AIService {
   private providers: Map<string, AIProvider> = new Map();
@@ -297,13 +433,25 @@ export function getAIService(): AIService {
   if (!aiServiceInstance) {
     aiServiceInstance = new AIService();
 
-    // Add OpenRouter if API key is available
-    const apiKey = process.env.OPENROUTER_API_KEY;
-    if (apiKey) {
-      aiServiceInstance.addProvider(new OpenRouterProvider(apiKey));
+    // Priority 1: DeepSeek (cheapest, fastest)
+    const deepseekKey = process.env.DEEPSEEK_API_KEY;
+    if (deepseekKey) {
+      aiServiceInstance.addProvider(new DeepSeekProvider(deepseekKey));
     }
 
-    // Add Ollama as fallback
+    // Priority 2: OpenAI direct
+    const openaiKey = process.env.OPENAI_API_KEY;
+    if (openaiKey) {
+      aiServiceInstance.addProvider(new OpenAIProvider(openaiKey));
+    }
+
+    // Priority 3: OpenRouter (routes to Claude, GPT, Gemini)
+    const openrouterKey = process.env.OPENROUTER_API_KEY;
+    if (openrouterKey) {
+      aiServiceInstance.addProvider(new OpenRouterProvider(openrouterKey));
+    }
+
+    // Priority 4: Local Ollama (fallback)
     aiServiceInstance.addProvider(new OllamaProvider());
   }
   return aiServiceInstance;

@@ -38,15 +38,7 @@ export function Header() {
   const toolLinks = [
     { label: t("nav.ai.matcher"), href: "/ai/matcher" },
     { label: t("nav.ai.documents"), href: "/ai/documents" },
-    { label: t("nav.ai.career"), href: "/ai/career" },
-    { label: t("nav.ai.calculator"), href: "/ai/calculator" },
-    { label: t("nav.ai.research"), href: "/ai/research" },
-    { label: t("nav.visa"), href: "/visa" },
-    { label: t("nav.costOfLiving"), href: "/cost-of-living" },
-    { label: t("nav.rankings"), href: "/rankings" },
-    { label: t("nav.courses"), href: "/courses" },
-    { label: t("nav.ieltsToefl"), href: "/ielts-toefl" },
-    { label: t("nav.tuition"), href: "/tuition" },
+    { label: t("nav.aiSearch"), href: "/ai-search" },
   ];
 
   const [mobileOpen, setMobileOpen] = useState(false);
