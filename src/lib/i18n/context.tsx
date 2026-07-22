@@ -1,6 +1,6 @@
 "use client";
 
-import React, { createContext, useContext, useCallback, useMemo } from "react";
+import React, { createContext, useContext, useCallback, useMemo, useState, useEffect } from "react";
 import { useLanguageStore } from "@/store/language-store";
 import { translations, type TranslationKey } from "./translations";
 import { LANGUAGES, type LanguageCode, isRTL } from "./config";
@@ -32,8 +32,18 @@ function getNestedValue(obj: any, path: string): string {
   return typeof current === "string" ? current : path;
 }
 
+function ChildrenWrapper({ children, languageKey }: { children: React.ReactNode; languageKey: string }) {
+  return <>{children}</>;
+}
+
 export function I18nProvider({ children }: { children: React.ReactNode }) {
   const { language, setLanguage } = useLanguageStore();
+  const [renderKey, setRenderKey] = useState(0);
+
+  // Force re-render when language changes
+  useEffect(() => {
+    setRenderKey((k) => k + 1);
+  }, [language]);
 
   const t = useCallback(
     (key: string): string => {
@@ -54,7 +64,13 @@ export function I18nProvider({ children }: { children: React.ReactNode }) {
     [language, setLanguage, t]
   );
 
-  return <I18nContext.Provider value={value}>{children}</I18nContext.Provider>;
+  return (
+    <I18nContext.Provider value={value}>
+      <ChildrenWrapper key={renderKey} languageKey={language}>
+        {children}
+      </ChildrenWrapper>
+    </I18nContext.Provider>
+  );
 }
 
 export function useI18n() {

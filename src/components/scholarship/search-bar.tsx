@@ -4,6 +4,7 @@ import { useState } from "react";
 import { useRouter } from "next/navigation";
 import { Input } from "@/components/ui/input";
 import { Button } from "@/components/ui/button";
+import { useI18n } from "@/lib/i18n/context";
 import { Search, Sparkles, MapPin, GraduationCap, Banknote } from "lucide-react";
 
 interface SearchBarProps {
@@ -14,14 +15,18 @@ interface SearchBarProps {
 }
 
 export function SearchBar({
-  placeholder = "Search scholarships...",
+  placeholder,
   variant = "default",
   showFilters = false,
   onSearch,
 }: SearchBarProps) {
+  const { t } = useI18n();
   const [query, setQuery] = useState("");
   const [showAdvanced, setShowAdvanced] = useState(false);
   const router = useRouter();
+
+  const defaultPlaceholder = t("scholarships.filters.search") || "Search scholarships...";
+  const searchPlaceholder = placeholder || defaultPlaceholder;
 
   const handleSearch = () => {
     if (onSearch) {
@@ -46,13 +51,13 @@ export function SearchBar({
                 value={query}
                 onChange={(e) => setQuery(e.target.value)}
                 onKeyDown={handleKeyDown}
-                placeholder="I'm from Pakistan with 3.6 CGPA, want fully funded Master's in Germany..."
+                placeholder={searchPlaceholder}
                 className="h-14 pl-12 pr-4 text-base border-0 focus-visible:ring-0 bg-transparent"
               />
             </div>
             <Button onClick={handleSearch} size="lg" className="h-12 px-6 rounded-xl">
               <Search className="h-5 w-5 mr-2" />
-              Search
+              {t("nav.search") || "Search"}
             </Button>
           </div>
 
@@ -60,10 +65,10 @@ export function SearchBar({
           {showFilters && (
             <div className="flex flex-wrap gap-2 mt-4 justify-center">
               {[
-                { icon: MapPin, label: "By Country" },
-                { icon: GraduationCap, label: "By Degree" },
-                { icon: Banknote, label: "Fully Funded" },
-                { icon: Sparkles, label: "AI Match" },
+                { icon: MapPin, label: t("scholarships.filters.country") || "By Country" },
+                { icon: GraduationCap, label: t("scholarships.filters.degree") || "By Degree" },
+                { icon: Banknote, label: t("scholarships.funding.fully_funded") || "Fully Funded" },
+                { icon: Sparkles, label: t("nav.aiSearch") || "AI Match" },
               ].map((filter) => (
                 <button
                   key={filter.label}
@@ -95,7 +100,7 @@ export function SearchBar({
         </div>
         <Button onClick={handleSearch}>
           <Search className="h-4 w-4 mr-2" />
-          Search
+          {t("nav.search") || "Search"}
         </Button>
       </div>
     </div>
