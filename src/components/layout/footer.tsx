@@ -4,40 +4,42 @@ import { useState } from "react";
 import Link from "next/link";
 import { GraduationCap, GitBranch, MessageCircle, Link2, Mail, Heart, Shield } from "lucide-react";
 import { AdminPanel } from "@/components/admin/admin-panel";
-
-const footerLinks = {
-  platform: [
-    { label: "Scholarship Search", href: "/scholarships" },
-    { label: "University Directory", href: "/universities" },
-    { label: "AI Tools", href: "/ai/tools" },
-    { label: "Research Hub", href: "/research" },
-    { label: "Rankings", href: "/rankings" },
-  ],
-  resources: [
-    { label: "AI Scholarship Matcher", href: "/ai/matcher" },
-    { label: "AI Document Analyzer", href: "/ai/documents" },
-    { label: "AI Career Predictor", href: "/ai/career" },
-    { label: "Visa Guide", href: "/visa" },
-    { label: "FAQs", href: "/faqs" },
-  ],
-  countries: [
-    { label: "United States", href: "/countries/united-states" },
-    { label: "United Kingdom", href: "/countries/united-kingdom" },
-    { label: "Germany", href: "/countries/germany" },
-    { label: "Canada", href: "/countries/canada" },
-    { label: "Australia", href: "/countries/australia" },
-  ],
-  company: [
-    { label: "About Us", href: "/about" },
-    { label: "Our Vision", href: "/vision" },
-    { label: "Contact", href: "/contact" },
-    { label: "Privacy Policy", href: "/privacy" },
-    { label: "Terms of Service", href: "/terms" },
-  ],
-};
+import { useI18n } from "@/lib/i18n/context";
 
 export function Footer() {
   const [adminPanelOpen, setAdminPanelOpen] = useState(false);
+  const { t } = useI18n();
+
+  const footerLinks = {
+    platform: [
+      { label: t("footer.platform.scholarshipSearch"), href: "/scholarships" },
+      { label: t("footer.platform.universityDirectory"), href: "/universities" },
+      { label: t("footer.platform.aiTools"), href: "/ai/tools" },
+      { label: t("footer.platform.researchHub"), href: "/research" },
+      { label: t("footer.platform.rankings"), href: "/rankings" },
+    ],
+    resources: [
+      { label: t("footer.resources.aiMatcher"), href: "/ai/matcher" },
+      { label: t("footer.resources.aiDocuments"), href: "/ai/documents" },
+      { label: t("footer.resources.aiCareer"), href: "/ai/career" },
+      { label: t("footer.resources.visaGuide"), href: "/visa" },
+      { label: t("footer.resources.faqs"), href: "/faqs" },
+    ],
+    countries: [
+      { label: t("footer.countries.us"), href: "/countries/united-states" },
+      { label: t("footer.countries.uk"), href: "/countries/united-kingdom" },
+      { label: t("footer.countries.germany"), href: "/countries/germany" },
+      { label: t("footer.countries.canada"), href: "/countries/canada" },
+      { label: t("footer.countries.australia"), href: "/countries/australia" },
+    ],
+    company: [
+      { label: t("footer.company.about"), href: "/about" },
+      { label: t("footer.company.vision"), href: "/vision" },
+      { label: t("footer.company.contact"), href: "/contact" },
+      { label: t("footer.company.privacy"), href: "/privacy" },
+      { label: t("footer.company.terms"), href: "/terms" },
+    ],
+  };
 
   return (
     <>
@@ -54,7 +56,7 @@ export function Footer() {
                 <span className="text-base font-bold gradient-text">GlobalScholar AI</span>
               </Link>
               <p className="text-sm text-[var(--muted-foreground)] mb-4">
-                Empowering the next generation of global learners through artificial intelligence.
+                {t("footer.aboutText")}
               </p>
               <div className="flex gap-3">
                 {[GitBranch, MessageCircle, Link2, Mail].map((Icon, i) => (
@@ -94,19 +96,19 @@ export function Footer() {
           {/* Bottom Section */}
           <div className="mt-12 pt-8 border-t border-[var(--border)] flex flex-col sm:flex-row justify-between items-center gap-4">
             <p className="text-xs text-[var(--muted-foreground)]">
-              &copy; {new Date().getFullYear()} GlobalScholar AI. All rights reserved.
+              {t("footer.copyright")}
             </p>
             <div className="flex items-center gap-4">
               <p className="text-xs text-[var(--muted-foreground)] flex items-center gap-1">
-                Made with <Heart className="h-3 w-3 text-red-500 fill-red-500" /> for students worldwide
+                {t("footer.madeWith")} <Heart className="h-3 w-3 text-red-500 fill-red-500" /> {t("footer.forStudents")}
               </p>
               <button
                 onClick={() => setAdminPanelOpen(true)}
                 className="flex items-center gap-1.5 text-xs text-[var(--muted-foreground)] hover:text-[var(--primary)] transition-colors"
-                title="Admin Panel"
+                title={t("footer.admin")}
               >
                 <Shield className="h-3 w-3" />
-                Admin
+                {t("footer.admin")}
               </button>
             </div>
           </div>

@@ -6,6 +6,7 @@ import { ScholarshipFilters } from "@/components/scholarship/scholarship-filters
 import { SearchBar } from "@/components/scholarship/search-bar";
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
+import { useI18n } from "@/lib/i18n/context";
 import type { Scholarship } from "@/types";
 import { SlidersHorizontal, Grid3X3, List, ArrowUpDown } from "lucide-react";
 
@@ -223,6 +224,7 @@ const mockScholarships: Scholarship[] = [
 ];
 
 export default function ScholarshipsPage() {
+  const { t } = useI18n();
   const [filters, setFilters] = useState<Record<string, string | boolean | undefined>>({});
   const [viewMode, setViewMode] = useState<"grid" | "list">("grid");
   const [sortBy, setSortBy] = useState<"matchScore" | "deadline" | "title">("matchScore");
@@ -281,12 +283,12 @@ export default function ScholarshipsPage() {
       {/* Header */}
       <div className="border-b border-[var(--border)] bg-[var(--card)]">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-8">
-          <h1 className="text-3xl font-bold mb-4">Find Scholarships</h1>
+          <h1 className="text-3xl font-bold mb-4">{t("scholarships.title")}</h1>
           <p className="text-[var(--muted-foreground)] mb-6">
-            Discover {filteredScholarships.length} scholarships matching your profile
+            {t("scholarships.subtitle")} - {filteredScholarships.length} {t("scholarships.results")}
           </p>
           <SearchBar
-            placeholder="Search by name, country, or university..."
+            placeholder={t("scholarships.filters.search")}
             onSearch={setSearchQuery}
           />
         </div>
@@ -312,7 +314,7 @@ export default function ScholarshipsPage() {
             <div className="flex items-center justify-between mb-6">
               <div className="flex items-center gap-2">
                 <span className="text-sm text-[var(--muted-foreground)]">
-                  {filteredScholarships.length} results
+                  {filteredScholarships.length} {t("scholarships.results")}
                 </span>
               </div>
               <div className="flex items-center gap-2">
@@ -332,9 +334,9 @@ export default function ScholarshipsPage() {
                   onChange={(e) => setSortBy(e.target.value as typeof sortBy)}
                   className="text-sm border border-[var(--input)] rounded-lg px-3 py-1.5 bg-[var(--background)]"
                 >
-                  <option value="matchScore">Best Match</option>
-                  <option value="deadline">Deadline</option>
-                  <option value="title">Name</option>
+                  <option value="matchScore">{t("scholarships.sort.bestMatch")}</option>
+                  <option value="deadline">{t("scholarships.sort.deadline")}</option>
+                  <option value="title">{t("scholarships.sort.name")}</option>
                 </select>
               </div>
             </div>
@@ -359,10 +361,10 @@ export default function ScholarshipsPage() {
             ) : (
               <div className="text-center py-12">
                 <p className="text-lg text-[var(--muted-foreground)]">
-                  No scholarships found matching your criteria.
+                  {t("scholarships.noResults")}
                 </p>
                 <Button onClick={clearFilters} className="mt-4">
-                  Clear Filters
+                  {t("scholarships.clearFilters")}
                 </Button>
               </div>
             )}

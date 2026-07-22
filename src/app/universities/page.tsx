@@ -5,6 +5,7 @@ import { Card, CardContent } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
 import { SearchBar } from "@/components/scholarship/search-bar";
+import { useI18n } from "@/lib/i18n/context";
 import type { University } from "@/types";
 import { MapPin, GraduationCap, ExternalLink, CheckCircle2, Globe, Users } from "lucide-react";
 
@@ -132,16 +133,17 @@ const mockUniversities: University[] = [
 ];
 
 export default function UniversitiesPage() {
+  const { t } = useI18n();
   return (
     <div className="min-h-screen bg-[var(--background)]">
       {/* Header */}
       <div className="border-b border-[var(--border)] bg-[var(--card)]">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-8">
-          <h1 className="text-3xl font-bold mb-4">Universities</h1>
+          <h1 className="text-3xl font-bold mb-4">{t("universities.title")}</h1>
           <p className="text-[var(--muted-foreground)] mb-6">
-            Explore {mockUniversities.length} verified universities worldwide
+            {t("universities.subtitle")} - {mockUniversities.length} {t("universities.verified")}
           </p>
-          <SearchBar placeholder="Search universities..." />
+          <SearchBar placeholder={t("universities.filters.search")} />
         </div>
       </div>
 
@@ -150,10 +152,10 @@ export default function UniversitiesPage() {
         {/* Quick Stats */}
         <div className="grid grid-cols-2 md:grid-cols-4 gap-4 mb-8">
           {[
-            { label: "Total Universities", value: "50,000+", icon: GraduationCap },
-            { label: "Countries", value: "200+", icon: Globe },
-            { label: "Verified", value: "10,000+", icon: CheckCircle2 },
-            { label: "Active Students", value: "2M+", icon: Users },
+            { label: t("universities.stats.total"), value: "50,000+", icon: GraduationCap },
+            { label: t("universities.stats.countries"), value: "200+", icon: Globe },
+            { label: t("universities.stats.verified"), value: "10,000+", icon: CheckCircle2 },
+            { label: t("universities.stats.students"), value: "2M+", icon: Users },
           ].map((stat) => (
             <Card key={stat.label}>
               <CardContent className="p-4 flex items-center gap-3">
@@ -209,10 +211,10 @@ export default function UniversitiesPage() {
                   <div className="flex items-center gap-4 text-[var(--muted-foreground)]">
                     <span className="flex items-center gap-1">
                       <GraduationCap className="h-3.5 w-3.5" />
-                      {uni.scholarshipCount} scholarships
+                      {uni.scholarshipCount} {t("universities.scholarships")}
                     </span>
                     {uni.ranking && (
-                      <span>#{uni.ranking} globally</span>
+                      <span>#{uni.ranking} {t("universities.globally")}</span>
                     )}
                   </div>
                   <Button asChild size="sm" variant="ghost">

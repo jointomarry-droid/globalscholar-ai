@@ -3,6 +3,7 @@
 import { useState } from "react";
 import { Card, CardContent } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
+import { useI18n } from "@/lib/i18n/context";
 import {
   Brain,
   Search,
@@ -32,6 +33,7 @@ interface ScholarshipMatch {
 }
 
 export default function AIMatcherPage() {
+  const { t } = useI18n();
   const [isAnalyzing, setIsAnalyzing] = useState(false);
   const [results, setResults] = useState<ScholarshipMatch[]>([]);
   const [profile, setProfile] = useState({
@@ -116,14 +118,13 @@ export default function AIMatcherPage() {
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 text-center">
           <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-blue-500/10 text-blue-500 text-sm font-medium mb-4">
             <Brain className="h-4 w-4" />
-            AI Scholarship Matcher
+            {t("ai.matcher.title")}
           </div>
           <h1 className="text-3xl sm:text-4xl font-bold mb-4 leading-tight">
-            Find Your Perfect Scholarship Match
+            {t("ai.matcher.title")}
           </h1>
           <p className="text-base sm:text-lg text-[var(--muted-foreground)] max-w-2xl mx-auto leading-relaxed">
-            Our AI analyzes your profile and finds scholarships that match your unique
-            qualifications with up to 95% accuracy.
+            {t("ai.matcher.subtitle")}
           </p>
         </div>
       </section>
@@ -135,18 +136,18 @@ export default function AIMatcherPage() {
             <CardContent className="p-6">
               <h2 className="text-xl font-bold mb-6 flex items-center gap-2">
                 <Sparkles className="h-5 w-5 text-primary" />
-                Your Profile
+                {t("ai.matcher.profileTitle")}
               </h2>
 
               <div className="grid sm:grid-cols-2 gap-4">
                 <div className="space-y-2">
-                  <label className="text-sm font-medium">Nationality</label>
+                  <label className="text-sm font-medium">{t("ai.matcher.nationality")}</label>
                   <select
                     value={profile.nationality}
                     onChange={(e) => setProfile({ ...profile, nationality: e.target.value })}
                     className="w-full px-4 py-2.5 rounded-lg border bg-background focus:outline-none focus:ring-2 focus:ring-primary/50"
                   >
-                    <option value="">Select country</option>
+                    <option value="">{t("ai.matcher.selectCountry")}</option>
                     <option value="pakistan">Pakistan</option>
                     <option value="india">India</option>
                     <option value="nigeria">Nigeria</option>
@@ -157,13 +158,13 @@ export default function AIMatcherPage() {
                 </div>
 
                 <div className="space-y-2">
-                  <label className="text-sm font-medium">Degree Level</label>
+                  <label className="text-sm font-medium">{t("ai.matcher.degreeLevel")}</label>
                   <select
                     value={profile.degree}
                     onChange={(e) => setProfile({ ...profile, degree: e.target.value })}
                     className="w-full px-4 py-2.5 rounded-lg border bg-background focus:outline-none focus:ring-2 focus:ring-primary/50"
                   >
-                    <option value="">Select degree</option>
+                    <option value="">{t("ai.matcher.selectDegree")}</option>
                     <option value="bachelors">Bachelor's</option>
                     <option value="masters">Master's</option>
                     <option value="phd">PhD</option>
@@ -172,13 +173,13 @@ export default function AIMatcherPage() {
                 </div>
 
                 <div className="space-y-2">
-                  <label className="text-sm font-medium">Field of Study</label>
+                  <label className="text-sm font-medium">{t("ai.matcher.fieldOfStudy")}</label>
                   <select
                     value={profile.field}
                     onChange={(e) => setProfile({ ...profile, field: e.target.value })}
                     className="w-full px-4 py-2.5 rounded-lg border bg-background focus:outline-none focus:ring-2 focus:ring-primary/50"
                   >
-                    <option value="">Select field</option>
+                    <option value="">{t("ai.matcher.selectField")}</option>
                     <option value="engineering">Engineering</option>
                     <option value="computer-science">Computer Science</option>
                     <option value="business">Business</option>
@@ -190,13 +191,13 @@ export default function AIMatcherPage() {
                 </div>
 
                 <div className="space-y-2">
-                  <label className="text-sm font-medium">GPA / CGPA</label>
+                  <label className="text-sm font-medium">{t("ai.matcher.gpa")}</label>
                   <select
                     value={profile.gpa}
                     onChange={(e) => setProfile({ ...profile, gpa: e.target.value })}
                     className="w-full px-4 py-2.5 rounded-lg border bg-background focus:outline-none focus:ring-2 focus:ring-primary/50"
                   >
-                    <option value="">Select GPA</option>
+                    <option value="">{t("ai.matcher.selectGpa")}</option>
                     <option value="4.0">4.0 (Perfect)</option>
                     <option value="3.7">3.7+ (Excellent)</option>
                     <option value="3.3">3.3+ (Very Good)</option>
@@ -207,10 +208,10 @@ export default function AIMatcherPage() {
                 </div>
 
                 <div className="space-y-2 sm:col-span-2">
-                  <label className="text-sm font-medium">Preferred Countries</label>
+                  <label className="text-sm font-medium">{t("ai.matcher.preferredCountries")}</label>
                   <input
                     type="text"
-                    placeholder="e.g., Germany, Canada, UK, Australia"
+                    placeholder={t("ai.matcher.countriesPlaceholder")}
                     value={profile.countries}
                     onChange={(e) => setProfile({ ...profile, countries: e.target.value })}
                     className="w-full px-4 py-2.5 rounded-lg border bg-background focus:outline-none focus:ring-2 focus:ring-primary/50"
@@ -218,9 +219,9 @@ export default function AIMatcherPage() {
                 </div>
 
                 <div className="space-y-2 sm:col-span-2">
-                  <label className="text-sm font-medium">Interests & Goals</label>
+                  <label className="text-sm font-medium">{t("ai.matcher.interests")}</label>
                   <textarea
-                    placeholder="Tell us about your career goals, research interests, or specific requirements..."
+                    placeholder={t("ai.matcher.interestsPlaceholder")}
                     value={profile.interests}
                     onChange={(e) => setProfile({ ...profile, interests: e.target.value })}
                     rows={3}
@@ -238,12 +239,12 @@ export default function AIMatcherPage() {
                 {isAnalyzing ? (
                   <>
                     <Loader2 className="h-5 w-5 mr-2 animate-spin" />
-                    Analyzing Your Profile...
+                    {t("ai.matcher.analyzing")}
                   </>
                 ) : (
                   <>
                     <Brain className="h-5 w-5 mr-2" />
-                    Find My Matches
+                    {t("ai.matcher.findMatches")}
                   </>
                 )}
               </Button>
@@ -255,7 +256,7 @@ export default function AIMatcherPage() {
             <div className="space-y-4">
               <h2 className="text-xl font-bold flex items-center gap-2">
                 <CheckCircle className="h-5 w-5 text-green-500" />
-                Found {results.length} Matches
+                {t("ai.matcher.foundMatches").replace("{count}", results.length.toString())}
               </h2>
 
               {results.map((scholarship) => (
@@ -295,7 +296,7 @@ export default function AIMatcherPage() {
                           {scholarship.deadline}
                         </div>
                         <Button size="sm" className="gradient-btn">
-                          Apply Now
+                          {t("ai.matcher.applyNow")}
                           <ArrowRight className="h-4 w-4 ml-1" />
                         </Button>
                       </div>

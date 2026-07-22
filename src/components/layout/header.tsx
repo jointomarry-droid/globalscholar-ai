@@ -5,6 +5,7 @@ import { useState } from "react";
 import { useRouter } from "next/navigation";
 import { useTheme } from "./theme-provider";
 import { useAuthStore, useUIStore } from "@/store";
+import { useI18n } from "@/lib/i18n/context";
 import { cn } from "@/lib/utils/cn";
 import { NotificationBell } from "@/features/notifications";
 import { LanguageSelector } from "@/components/language-selector";
@@ -24,33 +25,30 @@ import {
   ChevronDown,
 } from "lucide-react";
 
-const navLinks = [
-  { label: "Scholarships", href: "/scholarships" },
-  { label: "Universities", href: "/universities" },
-  { label: "AI Tools", href: "/ai/tools" },
-  { label: "Research", href: "/research" },
-  { label: "FAQs", href: "/faqs" },
-];
-
-const universityLinks = [
-  { label: "Vanderbilt University", href: "/universities/vanderbilt" },
-];
-
-const toolLinks = [
-  { label: "AI Scholarship Matcher", href: "/ai/matcher" },
-  { label: "AI Document Analyzer", href: "/ai/documents" },
-  { label: "AI Career Predictor", href: "/ai/career" },
-  { label: "AI Success Calculator", href: "/ai/calculator" },
-  { label: "AI Research Matcher", href: "/ai/research" },
-  { label: "Visa Guide", href: "/visa" },
-  { label: "Cost of Living", href: "/cost-of-living" },
-  { label: "Rankings", href: "/rankings" },
-  { label: "Courses", href: "/courses" },
-  { label: "IELTS/TOEFL", href: "/ielts-toefl" },
-  { label: "Tuition Fees", href: "/tuition" },
-];
-
 export function Header() {
+  const { t } = useI18n();
+  const navLinks = [
+    { label: t("nav.scholarships"), href: "/scholarships" },
+    { label: t("nav.universities"), href: "/universities" },
+    { label: t("nav.ai.tools"), href: "/ai/tools" },
+    { label: t("nav.research"), href: "/research" },
+    { label: t("nav.faqs"), href: "/faqs" },
+  ];
+
+  const toolLinks = [
+    { label: t("nav.ai.matcher"), href: "/ai/matcher" },
+    { label: t("nav.ai.documents"), href: "/ai/documents" },
+    { label: t("nav.ai.career"), href: "/ai/career" },
+    { label: t("nav.ai.calculator"), href: "/ai/calculator" },
+    { label: t("nav.ai.research"), href: "/ai/research" },
+    { label: t("nav.visa"), href: "/visa" },
+    { label: t("nav.costOfLiving"), href: "/cost-of-living" },
+    { label: t("nav.rankings"), href: "/rankings" },
+    { label: t("nav.courses"), href: "/courses" },
+    { label: t("nav.ieltsToefl"), href: "/ielts-toefl" },
+    { label: t("nav.tuition"), href: "/tuition" },
+  ];
+
   const [mobileOpen, setMobileOpen] = useState(false);
   const [userMenuOpen, setUserMenuOpen] = useState(false);
   const [toolsOpen, setToolsOpen] = useState(false);
@@ -97,7 +95,7 @@ export function Header() {
                 onClick={() => setToolsOpen(!toolsOpen)}
                 className="flex items-center gap-1 px-3 py-2 text-sm font-medium text-[var(--muted-foreground)] hover:text-[var(--foreground)] hover:bg-[var(--accent)] rounded-lg transition-colors"
               >
-                Tools
+                {t("nav.tools")}
                 <ChevronDown className="h-3 w-3" />
               </button>
               {toolsOpen && (
@@ -128,7 +126,7 @@ export function Header() {
               className="hidden sm:flex items-center gap-2 px-3 py-2 text-sm font-medium text-[var(--primary)] bg-[var(--accent)] rounded-lg hover:bg-[var(--primary)] hover:text-white transition-all"
             >
               <Sparkles className="h-4 w-4" />
-              <span className="hidden lg:inline">AI Search</span>
+              <span className="hidden lg:inline">{t("nav.aiSearch")}</span>
             </Link>
 
             {/* Theme Toggle */}
@@ -184,7 +182,7 @@ export function Header() {
                           className="flex items-center gap-2 px-3 py-2 text-sm rounded-lg hover:bg-[var(--accent)] transition-colors"
                         >
                           <LayoutDashboard className="h-4 w-4" />
-                          Dashboard
+                          {t("nav.dashboard")}
                         </Link>
                         {(user.role === "admin" || user.role === "super_admin") && (
                           <Link
@@ -193,7 +191,7 @@ export function Header() {
                             className="flex items-center gap-2 px-3 py-2 text-sm rounded-lg hover:bg-[var(--accent)] transition-colors"
                           >
                             <LayoutDashboard className="h-4 w-4" />
-                            Admin Panel
+                            {t("nav.admin")}
                           </Link>
                         )}
                         <button
@@ -201,7 +199,7 @@ export function Header() {
                           className="flex items-center gap-2 px-3 py-2 text-sm rounded-lg hover:bg-[var(--accent)] text-red-600 transition-colors w-full"
                         >
                           <LogOut className="h-4 w-4" />
-                          Sign Out
+                          {t("nav.logout")}
                         </button>
                       </div>
                     </div>
@@ -215,14 +213,14 @@ export function Header() {
                   className="hidden sm:flex items-center gap-2 px-3 py-2 text-sm font-medium text-[var(--foreground)] hover:bg-[var(--accent)] rounded-lg transition-colors"
                 >
                   <LogIn className="h-4 w-4" />
-                  Sign In
+                  {t("nav.login")}
                 </Link>
                 <Link
                   href="/register"
                   className="hidden sm:flex items-center gap-2 px-4 py-2 text-sm font-medium text-white gradient-btn rounded-lg"
                 >
                   <User className="h-4 w-4" />
-                  Get Started
+                  {t("nav.register")}
                 </Link>
               </>
             )}
@@ -253,7 +251,7 @@ export function Header() {
               </Link>
             ))}
             <div className="border-t border-[var(--border)] pt-2 mt-2">
-              <p className="px-3 py-1 text-xs font-medium text-[var(--muted-foreground)]">Tools</p>
+              <p className="px-3 py-1 text-xs font-medium text-[var(--muted-foreground)]">{t("nav.tools")}</p>
               {toolLinks.map((link) => (
                 <Link
                   key={link.href}
@@ -277,7 +275,7 @@ export function Header() {
                     className="block px-3 py-2 text-sm font-medium rounded-lg hover:bg-[var(--accent)]"
                     onClick={() => setMobileOpen(false)}
                   >
-                    Dashboard
+                    {t("nav.dashboard")}
                   </Link>
                   <button
                     onClick={() => {
@@ -286,7 +284,7 @@ export function Header() {
                     }}
                     className="block w-full text-left px-3 py-2 text-sm font-medium rounded-lg hover:bg-[var(--accent)] text-red-600"
                   >
-                    Sign Out
+                    {t("nav.logout")}
                   </button>
                 </>
               ) : (
@@ -296,14 +294,14 @@ export function Header() {
                     className="block px-3 py-2 text-sm font-medium rounded-lg hover:bg-[var(--accent)]"
                     onClick={() => setMobileOpen(false)}
                   >
-                    Sign In
+                    {t("nav.login")}
                   </Link>
                   <Link
                     href="/register"
                     className="block px-3 py-2 text-sm font-medium text-white gradient-btn rounded-lg text-center mt-2"
                     onClick={() => setMobileOpen(false)}
                   >
-                    Get Started Free
+                    {t("nav.register")}
                   </Link>
                 </>
               )}

@@ -4,6 +4,7 @@ import { useState } from "react";
 import Link from "next/link";
 import { Card, CardContent } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
+import { useI18n } from "@/lib/i18n/context";
 import {
   FlaskConical,
   Search,
@@ -103,6 +104,7 @@ const researchFunding = [
 ];
 
 export default function ResearchHubPage() {
+  const { t } = useI18n();
   const [searchQuery, setSearchQuery] = useState("");
   const [selectedField, setSelectedField] = useState("all");
 
@@ -113,15 +115,13 @@ export default function ResearchHubPage() {
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 text-center">
           <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-cyan-500/10 text-cyan-500 text-sm font-medium mb-4">
             <FlaskConical className="h-4 w-4" />
-            Research Hub
+            {t("research.title")}
           </div>
           <h1 className="text-3xl sm:text-4xl lg:text-5xl font-bold mb-4 leading-tight">
-            Discover Research
-            <span className="gradient-text"> Opportunities Worldwide</span>
+            {t("research.title")}
           </h1>
           <p className="text-base sm:text-lg text-[var(--muted-foreground)] max-w-2xl mx-auto mb-8 leading-relaxed">
-            Find research supervisors, funding opportunities, and collaboration partners
-            across 200+ countries. Powered by AI to match your research interests.
+            {t("research.subtitle")}
           </p>
 
           {/* Search */}
@@ -130,7 +130,7 @@ export default function ResearchHubPage() {
               <Search className="absolute left-4 top-1/2 -translate-y-1/2 h-5 w-5 text-muted-foreground" />
               <input
                 type="text"
-                placeholder="Search research areas, supervisors, or funding..."
+                placeholder={t("research.searchPlaceholder")}
                 value={searchQuery}
                 onChange={(e) => setSearchQuery(e.target.value)}
                 className="w-full pl-12 pr-4 py-3 rounded-xl border bg-background focus:outline-none focus:ring-2 focus:ring-primary/50"
@@ -138,7 +138,7 @@ export default function ResearchHubPage() {
             </div>
             <Button className="gradient-btn" size="lg">
               <Search className="h-5 w-5 mr-2" />
-              Search
+              {t("research.search")}
             </Button>
           </div>
         </div>
@@ -148,9 +148,9 @@ export default function ResearchHubPage() {
       <section className="py-16 sm:py-20">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-10 sm:mb-12">
-            <h2 className="text-2xl sm:text-3xl font-bold mb-4">Popular Research Areas</h2>
+            <h2 className="text-2xl sm:text-3xl font-bold mb-4">{t("research.popularAreas")}</h2>
             <p className="text-[var(--muted-foreground)] max-w-2xl mx-auto">
-              Explore research opportunities across the most in-demand fields worldwide.
+              {t("research.popularAreasDesc")}
             </p>
           </div>
 
@@ -162,7 +162,7 @@ export default function ResearchHubPage() {
                     <area.icon className="h-6 w-6 text-white" />
                   </div>
                   <h3 className="font-semibold mb-1">{area.name}</h3>
-                  <p className="text-sm text-[var(--muted-foreground)]">{area.count} opportunities</p>
+                  <p className="text-sm text-[var(--muted-foreground)]">{area.count} {t("research.opportunities")}</p>
                 </CardContent>
               </Card>
             ))}
@@ -175,14 +175,14 @@ export default function ResearchHubPage() {
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
           <div className="flex flex-col sm:flex-row sm:items-center justify-between mb-10 sm:mb-12 gap-4">
             <div>
-              <h2 className="text-2xl sm:text-3xl font-bold mb-2">Top Research Supervisors</h2>
+              <h2 className="text-2xl sm:text-3xl font-bold mb-2">{t("research.topSupervisors")}</h2>
               <p className="text-[var(--muted-foreground)]">
-                Connect with leading researchers in your field.
+                {t("research.topSupervisorsDesc")}
               </p>
             </div>
             <Button variant="outline" asChild>
               <Link href="/research/supervisors">
-                View All <ArrowRight className="h-4 w-4 ml-2" />
+                {t("research.viewAll")} <ArrowRight className="h-4 w-4 ml-2" />
               </Link>
             </Button>
           </div>
@@ -210,12 +210,12 @@ export default function ResearchHubPage() {
                       {supervisor.field}
                     </div>
                     <div className="flex items-center gap-4 text-xs">
-                      <span>{supervisor.publications} publications</span>
-                      <span>{supervisor.citations.toLocaleString()} citations</span>
+                      <span>{supervisor.publications} {t("research.publications")}</span>
+                      <span>{supervisor.citations.toLocaleString()} {t("research.citations")}</span>
                     </div>
                   </div>
                   <Button size="sm" variant="outline" className="w-full mt-4">
-                    View Profile
+                    {t("research.viewProfile")}
                   </Button>
                 </CardContent>
               </Card>
@@ -228,9 +228,9 @@ export default function ResearchHubPage() {
       <section className="py-16 sm:py-20">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-10 sm:mb-12">
-            <h2 className="text-2xl sm:text-3xl font-bold mb-4">Research Funding Opportunities</h2>
+            <h2 className="text-2xl sm:text-3xl font-bold mb-4">{t("research.funding")}</h2>
             <p className="text-[var(--muted-foreground)] max-w-2xl mx-auto">
-              Discover grants, fellowships, and funding for your research projects.
+              {t("research.fundingDesc")}
             </p>
           </div>
 
@@ -249,16 +249,16 @@ export default function ResearchHubPage() {
                   </div>
                   <div className="grid grid-cols-2 gap-4 mb-4">
                     <div>
-                      <p className="text-xs text-muted-foreground">Amount</p>
+                      <p className="text-xs text-muted-foreground">{t("research.amount")}</p>
                       <p className="text-sm font-semibold">{funding.amount}</p>
                     </div>
                     <div>
-                      <p className="text-xs text-muted-foreground">Deadline</p>
+                      <p className="text-xs text-muted-foreground">{t("research.deadline")}</p>
                       <p className="text-sm font-semibold">{funding.deadline}</p>
                     </div>
                   </div>
                   <Button size="sm" className="w-full gradient-btn">
-                    Learn More
+                    {t("research.learnMore")}
                     <ArrowRight className="h-4 w-4 ml-2" />
                   </Button>
                 </CardContent>
@@ -272,9 +272,9 @@ export default function ResearchHubPage() {
       <section className="py-16 sm:py-20 bg-[var(--card)]">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-10 sm:mb-12">
-            <h2 className="text-2xl sm:text-3xl font-bold mb-4">AI Research Tools</h2>
+            <h2 className="text-2xl sm:text-3xl font-bold mb-4">{t("research.aiTools")}</h2>
             <p className="text-[var(--muted-foreground)] max-w-2xl mx-auto">
-              Leverage our AI tools to accelerate your research journey.
+              {t("research.aiToolsDesc")}
             </p>
           </div>
 
@@ -283,19 +283,19 @@ export default function ResearchHubPage() {
               {
                 icon: Brain,
                 title: "AI Research Matcher",
-                description: "Find supervisors and labs that match your research interests",
+                description: t("research.tools.matcher"),
                 href: "/ai/research",
               },
               {
                 icon: FileText,
                 title: "Grant Proposal Writer",
-                description: "AI-assisted writing for research grant proposals",
+                description: t("research.tools.grantWriter"),
                 href: "/ai/grant-writer",
               },
               {
                 icon: BarChart3,
                 title: "Publication Analyzer",
-                description: "Analyze publication trends and find collaboration opportunities",
+                description: t("research.tools.publications"),
                 href: "/ai/publications",
               },
             ].map((tool) => (
