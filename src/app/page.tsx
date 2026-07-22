@@ -58,61 +58,61 @@ export default function HomePage() {
     },
     {
       icon: Calendar,
-      title: "Smart Deadline Tracker",
-      description: "Never miss a deadline with intelligent reminders and a visual calendar of all your applications.",
+      title: t("home.features.deadlineTracker.title"),
+      description: t("home.features.deadlineTracker.description"),
     },
     {
       icon: Shield,
-      title: "Verified Listings",
-      description: "Every scholarship is verified by our team and AI system to ensure accuracy and legitimacy.",
+      title: t("home.features.verifiedListings.title"),
+      description: t("home.features.verifiedListings.description"),
     },
     {
       icon: FileText,
-      title: "Document Builder",
-      description: "AI-powered resume builder and document checklist generator for each scholarship application.",
+      title: t("home.features.documentBuilder.title"),
+      description: t("home.features.documentBuilder.description"),
     },
   ];
 
   const aiTools = [
     {
       icon: Brain,
-      title: "AI Scholarship Matcher",
-      description: "Our AI scans 500,000+ scholarships and ranks them by compatibility with your profile.",
+      title: t("nav.ai.matcher"),
+      description: t("ai.matcher.subtitle"),
       href: "/ai/matcher",
       color: "from-blue-500 to-purple-600",
     },
     {
       icon: FileText,
-      title: "AI Document Analyzer",
-      description: "Upload your SOP, CV, or essays and get instant AI feedback.",
+      title: t("ai.documents.title"),
+      description: t("ai.documents.description"),
       href: "/ai/documents",
       color: "from-green-500 to-teal-600",
     },
     {
       icon: Target,
-      title: "AI Career Predictor",
-      description: "Predict your career trajectory and earning potential worldwide.",
+      title: t("ai.career.title"),
+      description: t("ai.career.description"),
       href: "/ai/career",
       color: "from-orange-500 to-red-600",
     },
     {
       icon: LineChart,
-      title: "AI Success Calculator",
-      description: "Calculate your chances of getting selected for specific scholarships.",
+      title: t("ai.calculator.title"),
+      description: t("ai.calculator.description"),
       href: "/ai/calculator",
       color: "from-purple-500 to-pink-600",
     },
     {
       icon: FlaskConical,
-      title: "AI Research Matcher",
-      description: "Find research supervisors and funding opportunities.",
+      title: t("ai.research.title"),
+      description: t("ai.research.description"),
       href: "/ai/research",
       color: "from-cyan-500 to-blue-600",
     },
     {
       icon: Globe2,
-      title: "AI University Predictor",
-      description: "Get AI-predicted acceptance rates and program rankings.",
+      title: t("ai.universityPredictor.title"),
+      description: t("ai.universityPredictor.description"),
       href: "/ai/university-predictor",
       color: "from-indigo-500 to-violet-600",
     },
@@ -145,37 +145,37 @@ export default function HomePage() {
   const howItWorks = [
     {
       step: 1,
-      title: "Create Your Profile",
-      description: "Tell us about your education, goals, and preferences.",
+      title: t("home.howItWorks.step1.title"),
+      description: t("home.howItWorks.step1.description"),
       icon: Users,
     },
     {
       step: 2,
-      title: "AI Finds Matches",
-      description: "Our algorithm scans 500,000+ scholarships and ranks them.",
+      title: t("home.howItWorks.step2.title"),
+      description: t("home.howItWorks.step2.description"),
       icon: Sparkles,
     },
     {
       step: 3,
-      title: "Apply with Confidence",
-      description: "Use our AI tools to write essays and build resumes.",
+      title: t("home.howItWorks.step3.title"),
+      description: t("home.howItWorks.step3.description"),
       icon: FileText,
     },
     {
       step: 4,
-      title: "Track & Succeed",
-      description: "Monitor your applications and celebrate when you receive offers.",
+      title: t("home.howItWorks.step4.title"),
+      description: t("home.howItWorks.step4.description"),
       icon: TrendingUp,
     },
   ];
 
   const ecosystem = [
-    { icon: GraduationCap, title: "GlobalScholar Search", description: "AI-powered scholarship discovery" },
-    { icon: FileText, title: "GlobalScholar Apply", description: "Streamlined application portal" },
-    { icon: Globe2, title: "GlobalScholar Visa", description: "Visa guidance assistance" },
-    { icon: Briefcase, title: "GlobalScholar Career", description: "Career counseling support" },
-    { icon: FlaskConical, title: "GlobalScholar Research", description: "Research collaboration" },
-    { icon: Building2, title: "GlobalScholar CRM", description: "University management" },
+    { icon: GraduationCap, title: t("home.ecosystem.items.search.title"), description: t("home.ecosystem.items.search.description") },
+    { icon: FileText, title: t("home.ecosystem.items.apply.title"), description: t("home.ecosystem.items.apply.description") },
+    { icon: Globe2, title: t("home.ecosystem.items.visa.title"), description: t("home.ecosystem.items.visa.description") },
+    { icon: Briefcase, title: t("home.ecosystem.items.career.title"), description: t("home.ecosystem.items.career.description") },
+    { icon: FlaskConical, title: t("home.ecosystem.items.research.title"), description: t("home.ecosystem.items.research.description") },
+    { icon: Building2, title: t("home.ecosystem.items.crm.title"), description: t("home.ecosystem.items.crm.description") },
   ];
 
   return (
@@ -233,7 +233,7 @@ export default function HomePage() {
           <div className="text-center mb-10 sm:mb-12">
             <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-[var(--primary)]/10 text-[var(--primary)] text-sm font-medium mb-4">
               <Lightbulb className="h-4 w-4" />
-              AI Tools
+              {t("home.aiToolsBadge")}
             </div>
             <h2 className="text-2xl sm:text-3xl lg:text-4xl font-bold mb-4">
               {t("home.features.title")}
@@ -294,7 +294,7 @@ export default function HomePage() {
       <section className="py-16 sm:py-20">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-10 sm:mb-12">
-            <h2 className="text-2xl sm:text-3xl lg:text-4xl font-bold mb-4">{t("home.features.title")}</h2>
+            <h2 className="text-2xl sm:text-3xl lg:text-4xl font-bold mb-4">{t("home.howItWorks.title")}</h2>
           </div>
 
           <div className="grid grid-cols-2 lg:grid-cols-4 gap-6 sm:gap-8">
@@ -303,7 +303,7 @@ export default function HomePage() {
                 <div className="flex h-14 w-14 sm:h-16 sm:w-16 items-center justify-center rounded-2xl bg-[var(--accent)] mx-auto mb-4">
                   <step.icon className="h-7 w-7 sm:h-8 sm:w-8 text-[var(--primary)]" />
                 </div>
-                <div className="text-xs font-bold text-[var(--primary)] mb-2">STEP {step.step}</div>
+                <div className="text-xs font-bold text-[var(--primary)] mb-2">{step.step}</div>
                 <h3 className="text-base sm:text-lg font-semibold mb-2">{step.title}</h3>
                 <p className="text-sm text-[var(--muted-foreground)] leading-relaxed">{step.description}</p>
               </div>
@@ -318,9 +318,9 @@ export default function HomePage() {
           <div className="text-center mb-10 sm:mb-12">
             <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-[var(--primary)]/10 text-[var(--primary)] text-sm font-medium mb-4">
               <Rocket className="h-4 w-4" />
-              {t("home.features.title")}
+              {t("home.ecosystem.title")}
             </div>
-            <h2 className="text-2xl sm:text-3xl lg:text-4xl font-bold mb-4">{t("home.features.title")}</h2>
+            <h2 className="text-2xl sm:text-3xl lg:text-4xl font-bold mb-4">{t("home.ecosystem.title")}</h2>
           </div>
 
           <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-6 gap-4">
@@ -377,7 +377,7 @@ export default function HomePage() {
       <section className="py-16 sm:py-20 bg-[var(--card)]">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-10 sm:mb-12">
-            <h2 className="text-2xl sm:text-3xl lg:text-4xl font-bold mb-4">{t("home.features.title")}</h2>
+            <h2 className="text-2xl sm:text-3xl lg:text-4xl font-bold mb-4">{t("home.testimonials.title")}</h2>
           </div>
 
           <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6 lg:gap-8">

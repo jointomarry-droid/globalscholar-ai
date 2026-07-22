@@ -2,6 +2,7 @@
 
 import { useState } from "react";
 import { Card, CardContent } from "@/components/ui/card";
+import { useI18n } from "@/lib/i18n/context";
 import {
   ChevronDown,
   ChevronUp,
@@ -171,9 +172,21 @@ const categories = [
 ];
 
 export default function FAQsPage() {
+  const { t } = useI18n();
   const [searchQuery, setSearchQuery] = useState("");
   const [selectedCategory, setSelectedCategory] = useState("all");
   const [expandedFAQ, setExpandedFAQ] = useState<number | null>(null);
+
+  const categories = [
+    { id: "all", label: t("faqs.categories.all"), icon: HelpCircle },
+    { id: "general", label: t("faqs.categories.general"), icon: Globe },
+    { id: "scholarships", label: t("faqs.categories.scholarships"), icon: GraduationCap },
+    { id: "ai-tools", label: t("ai.tools.title"), icon: Brain },
+    { id: "application", label: t("faqs.categories.applications"), icon: FileText },
+    { id: "countries", label: t("faqs.categories.visas"), icon: Globe },
+    { id: "financial", label: t("faqs.categories.financial"), icon: CreditCard },
+    { id: "technical", label: t("common.close"), icon: Shield },
+  ];
 
   const filteredFAQs = faqs.filter((faq) => {
     const matchesSearch =
@@ -190,15 +203,14 @@ export default function FAQsPage() {
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 text-center">
           <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-[var(--primary)]/10 text-[var(--primary)] text-sm font-medium mb-4">
             <HelpCircle className="h-4 w-4" />
-            Frequently Asked Questions
+            {t("faqs.title")}
           </div>
           <h1 className="text-3xl sm:text-4xl lg:text-5xl font-bold mb-4 leading-tight">
-            Everything You Need to
-            <span className="gradient-text"> Know</span>
+            {t("faqs.title")}
+            <span className="gradient-text"> </span>
           </h1>
           <p className="text-base sm:text-lg text-[var(--muted-foreground)] max-w-2xl mx-auto mb-8 leading-relaxed">
-            Find answers to common questions about GlobalScholar AI, our AI tools,
-            scholarship applications, and studying abroad.
+            {t("faqs.subtitle")}
           </p>
 
           {/* Search */}
@@ -206,7 +218,7 @@ export default function FAQsPage() {
             <Search className="absolute left-4 top-1/2 -translate-y-1/2 h-5 w-5 text-muted-foreground" />
             <input
               type="text"
-              placeholder="Search questions..."
+              placeholder={t("faqs.searchPlaceholder")}
               value={searchQuery}
               onChange={(e) => setSearchQuery(e.target.value)}
               className="w-full pl-12 pr-4 py-3 rounded-xl border bg-background focus:outline-none focus:ring-2 focus:ring-primary/50"
@@ -262,9 +274,9 @@ export default function FAQsPage() {
           {filteredFAQs.length === 0 && (
             <div className="text-center py-12">
               <HelpCircle className="h-12 w-12 text-muted-foreground mx-auto mb-4" />
-              <p className="text-lg font-medium mb-2">No questions found</p>
+              <p className="text-lg font-medium mb-2">{t("common.noResults")}</p>
               <p className="text-sm text-muted-foreground">
-                Try adjusting your search or category filter.
+                {t("common.retry")}
               </p>
             </div>
           )}
@@ -272,10 +284,10 @@ export default function FAQsPage() {
           {/* Contact */}
           <div className="mt-12 text-center">
             <p className="text-sm text-muted-foreground mb-4">
-              Can't find what you're looking for?
+              {t("faqs.stillHaveQuestionsDesc")}
             </p>
             <button className="px-6 py-3 rounded-xl gradient-btn text-white font-medium">
-              Contact Support
+              {t("faqs.contactUs")}
             </button>
           </div>
         </div>

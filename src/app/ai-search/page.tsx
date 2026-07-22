@@ -6,6 +6,7 @@ import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Badge } from "@/components/ui/badge";
 import { ScholarshipCard } from "@/components/scholarship/scholarship-card";
+import { useI18n } from "@/lib/i18n/context";
 import type { Scholarship } from "@/types";
 import {
   Sparkles,
@@ -36,6 +37,7 @@ interface Message {
 }
 
 export default function AISearchPage() {
+  const { t } = useI18n();
   const [messages, setMessages] = useState<Message[]>([
     {
       id: "welcome",
@@ -84,7 +86,7 @@ export default function AISearchPage() {
         role: "assistant",
         content: result.success
           ? result.data.answer
-          : "I'm sorry, I couldn't process your request. Please try again.",
+          : `${t("common.error")}. ${t("common.retry")}.`,
         results: result.success ? result.data.scholarships : undefined,
         suggestions: result.success ? result.data.suggestions : undefined,
       };
@@ -94,7 +96,7 @@ export default function AISearchPage() {
       const errorMessage: Message = {
         id: `error-${Date.now()}`,
         role: "assistant",
-        content: "I'm sorry, there was a connection error. Please try again.",
+        content: `${t("common.error")}. ${t("common.retry")}.`,
         suggestions: ["Try again", "Show me fully funded scholarships", "Find scholarships by country"],
       };
       setMessages((prev) => [...prev, errorMessage]);

@@ -1,6 +1,7 @@
 "use client";
 
 import { Card, CardContent } from "@/components/ui/card";
+import { useI18n } from "@/lib/i18n/context";
 import {
   Rocket,
   Target,
@@ -105,40 +106,42 @@ const milestones = [
   },
 ];
 
-const competitiveAdvantages = [
-  {
-    title: "AI-First Architecture",
-    description: "Every feature is built with AI at its core, not as an add-on. This gives us a fundamental advantage in personalization and accuracy.",
-    icon: Brain,
-  },
-  {
-    title: "Complete Ecosystem",
-    description: "From discovery to career — we cover every stage of the education journey. No competitor offers this comprehensive approach.",
-    icon: Globe2,
-  },
-  {
-    title: "Data Network Effect",
-    description: "More users → more data → better AI → more users. This flywheel creates an ever-widening moat that competitors cannot replicate.",
-    icon: TrendingUp,
-  },
-  {
-    title: "Global Scale",
-    description: "200+ countries, 50,000+ universities, 500,000+ scholarships. Our database scale is unmatched and growing daily.",
-    icon: Globe,
-  },
-  {
-    title: "Multi-Language Support",
-    description: "12 languages with RTL support. We serve students in their native language, breaking down barriers to global education.",
-    icon: Heart,
-  },
-  {
-    title: "Trust & Verification",
-    description: "Every scholarship is verified by AI and human reviewers. Our verification system builds trust that competitors lack.",
-    icon: Shield,
-  },
-];
-
 export default function VisionPage() {
+  const { t } = useI18n();
+
+  const competitiveAdvantages = [
+    {
+      title: t("vision.competitiveAdvantages"),
+      description: "Every feature is built with AI at its core, not as an add-on. This gives us a fundamental advantage in personalization and accuracy.",
+      icon: Brain,
+    },
+    {
+      title: t("vision.competitiveAdvantages"),
+      description: "From discovery to career — we cover every stage of the education journey. No competitor offers this comprehensive approach.",
+      icon: Globe2,
+    },
+    {
+      title: t("vision.competitiveAdvantages"),
+      description: "More users → more data → better AI → more users. This flywheel creates an ever-widening moat that competitors cannot replicate.",
+      icon: TrendingUp,
+    },
+    {
+      title: t("vision.competitiveAdvantages"),
+      description: "200+ countries, 50,000+ universities, 500,000+ scholarships. Our database scale is unmatched and growing daily.",
+      icon: Globe,
+    },
+    {
+      title: t("vision.competitiveAdvantages"),
+      description: "12 languages with RTL support. We serve students in their native language, breaking down barriers to global education.",
+      icon: Heart,
+    },
+    {
+      title: t("vision.competitiveAdvantages"),
+      description: "Every scholarship is verified by AI and human reviewers. Our verification system builds trust that competitors lack.",
+      icon: Shield,
+    },
+  ];
+
   return (
     <div className="min-h-screen">
       {/* Hero */}
@@ -146,15 +149,13 @@ export default function VisionPage() {
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 text-center">
           <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-[var(--primary)]/10 text-[var(--primary)] text-sm font-medium mb-4">
             <Rocket className="h-4 w-4" />
-            Our Vision
+            {t("vision.title")}
           </div>
           <h1 className="text-3xl sm:text-4xl lg:text-5xl font-bold mb-4 leading-tight">
-            Building the Future of
-            <span className="gradient-text"> Global Education</span>
+            {t("vision.subtitle")}
           </h1>
           <p className="text-base sm:text-lg text-[var(--muted-foreground)] max-w-2xl mx-auto mb-8 leading-relaxed">
-            From Admission to Global Career — our 20-year roadmap to becoming the
-            definitive AI-powered global education ecosystem with no competitor.
+            {t("vision.joinJourneyDesc")}
           </p>
         </div>
       </section>
@@ -163,7 +164,7 @@ export default function VisionPage() {
       <section className="py-8 bg-gradient-to-r from-[var(--primary)] to-[var(--gradient-end)]">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
           <p className="text-center text-lg sm:text-xl lg:text-2xl font-semibold text-white">
-            "From Admission to Global Career"
+            {t("vision.roadmap")}
           </p>
         </div>
       </section>
@@ -172,9 +173,9 @@ export default function VisionPage() {
       <section className="py-16 sm:py-20">
         <div className="mx-auto max-w-5xl px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-12">
-            <h2 className="text-2xl sm:text-3xl font-bold mb-4">20-Year Roadmap</h2>
+            <h2 className="text-2xl sm:text-3xl font-bold mb-4">{t("vision.milestones")}</h2>
             <p className="text-[var(--muted-foreground)] max-w-2xl mx-auto">
-              Our strategic vision to dominate global education technology by 2040.
+              {t("vision.subtitle")}
             </p>
           </div>
 
@@ -238,9 +239,9 @@ export default function VisionPage() {
       <section className="py-16 sm:py-20 bg-[var(--card)]">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-12">
-            <h2 className="text-2xl sm:text-3xl font-bold mb-4">Why We'll Have No Competitors</h2>
+            <h2 className="text-2xl sm:text-3xl font-bold mb-4">{t("vision.competitiveAdvantages")}</h2>
             <p className="text-[var(--muted-foreground)] max-w-2xl mx-auto">
-              Our strategic advantages create an insurmountable moat in global education technology.
+              {t("vision.joinJourneyDesc")}
             </p>
           </div>
 
@@ -292,10 +293,10 @@ export default function VisionPage() {
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <button className="px-8 py-3 rounded-xl bg-white text-[var(--primary)] font-semibold hover:bg-white/90 transition-colors">
-              Get Started Free
+              {t("vision.joinJourney")}
             </button>
             <button className="px-8 py-3 rounded-xl border-2 border-white/30 text-white font-semibold hover:bg-white/10 transition-colors">
-              Partner With Us
+              {t("vision.joinJourneyDesc")}
             </button>
           </div>
         </div>

@@ -60,12 +60,76 @@ const en = {
         title: "Global Community",
         description: "Connect with scholars and mentors worldwide",
       },
+      deadlineTracker: {
+        title: "Smart Deadline Tracker",
+        description: "Never miss a deadline with intelligent reminders and a visual calendar of all your applications.",
+      },
+      verifiedListings: {
+        title: "Verified Listings",
+        description: "Every scholarship is verified by our team and AI system to ensure accuracy and legitimacy.",
+      },
+      documentBuilder: {
+        title: "Document Builder",
+        description: "AI-powered resume builder and document checklist generator for each scholarship application.",
+      },
     },
     stats: {
       scholarships: "Scholarships",
       universities: "Universities",
       countries: "Countries",
       students: "Students Helped",
+    },
+    aiToolsBadge: "AI Tools",
+    howItWorks: {
+      title: "How It Works",
+      step1: {
+        title: "Create Your Profile",
+        description: "Tell us about your education, goals, and preferences.",
+      },
+      step2: {
+        title: "AI Finds Matches",
+        description: "Our algorithm scans 500,000+ scholarships and ranks them.",
+      },
+      step3: {
+        title: "Apply with Confidence",
+        description: "Use our AI tools to write essays and build resumes.",
+      },
+      step4: {
+        title: "Track & Succeed",
+        description: "Monitor your applications and celebrate when you receive offers.",
+      },
+    },
+    testimonials: {
+      title: "What Our Students Say",
+    },
+    ecosystem: {
+      title: "The GlobalScholar Ecosystem",
+      items: {
+        search: {
+          title: "GlobalScholar Search",
+          description: "AI-powered scholarship discovery",
+        },
+        apply: {
+          title: "GlobalScholar Apply",
+          description: "Streamlined application portal",
+        },
+        visa: {
+          title: "GlobalScholar Visa",
+          description: "Visa guidance assistance",
+        },
+        career: {
+          title: "GlobalScholar Career",
+          description: "Career counseling support",
+        },
+        research: {
+          title: "GlobalScholar Research",
+          description: "Research collaboration",
+        },
+        crm: {
+          title: "GlobalScholar CRM",
+          description: "University management",
+        },
+      },
     },
   },
   // Scholarships
@@ -266,6 +330,22 @@ const en = {
     chatbot: {
       title: "AI Assistant",
       description: "Get instant answers to your questions",
+    },
+    career: {
+      title: "AI Career Predictor",
+      description: "Predict your career trajectory and earning potential worldwide.",
+    },
+    calculator: {
+      title: "AI Success Calculator",
+      description: "Calculate your chances of getting selected for specific scholarships.",
+    },
+    research: {
+      title: "AI Research Matcher",
+      description: "Find research supervisors and funding opportunities.",
+    },
+    universityPredictor: {
+      title: "AI University Predictor",
+      description: "Get AI-predicted acceptance rates and program rankings.",
     },
   },
   // Research
