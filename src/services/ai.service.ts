@@ -305,7 +305,7 @@ export class AIService {
   private providers: Map<string, AIProvider> = new Map();
   private activeProvider: string;
 
-  constructor(activeProvider = "openrouter") {
+  constructor(activeProvider = "deepseek") {
     this.activeProvider = activeProvider;
   }
 
