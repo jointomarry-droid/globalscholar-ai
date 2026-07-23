@@ -2,13 +2,13 @@
 
 import { useState } from "react";
 import Link from "next/link";
+import { useTranslations } from "next-intl";
 import { GraduationCap, GitBranch, MessageCircle, Link2, Mail, Heart, Shield } from "lucide-react";
 import { AdminPanel } from "@/components/admin/admin-panel";
-import { useI18n } from "@/lib/i18n/context";
 
 export function Footer() {
   const [adminPanelOpen, setAdminPanelOpen] = useState(false);
-  const { t } = useI18n();
+  const t = useTranslations();
 
   const footerLinks = {
     platform: [
@@ -74,8 +74,8 @@ export function Footer() {
             {/* Link Columns */}
             {Object.entries(footerLinks).map(([title, links]) => (
               <div key={title}>
-                <h3 className="text-sm font-semibold text-[var(--foreground)] mb-3 capitalize">
-                  {title}
+                <h3 className="text-sm font-semibold text-[var(--foreground)] mb-3">
+                  {t(`footer.headings.${title}`)}
                 </h3>
                 <ul className="space-y-2">
                   {links.map((link) => (

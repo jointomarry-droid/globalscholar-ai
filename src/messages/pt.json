@@ -1,0 +1,588 @@
+{
+  "nav": {
+    "home": "Inicio",
+    "scholarships": "Bolsas",
+    "universities": "Universidades",
+    "courses": "Cursos",
+    "rankings": "Rankings",
+    "resources": "Recursos",
+    "community": "Comunidade",
+    "about": "Sobre",
+    "contact": "Contato",
+    "search": "Pesquisar",
+    "login": "Entrar",
+    "register": "Começar",
+    "profile": "Perfil",
+    "dashboard": "Painel",
+    "logout": "Sair",
+    "admin": "Painel Administrativo",
+    "tools": "Ferramentas",
+    "aiSearch": "Pesquisa com IA",
+    "faqs": "Perguntas Frequentes",
+    "research": "Pesquisa",
+    "ai": {
+      "tools": "Ferramentas de IA",
+      "matcher": "Correspondência de Bolsas com IA",
+      "documents": "Analisador de Documentos com IA",
+      "career": "Preditor de Carreira com IA",
+      "calculator": "Calculadora de Sucesso com IA",
+      "research": "Correspondência de Pesquisa com IA"
+    },
+    "visa": "Guia de Vistos",
+    "costOfLiving": "Custo de Vida",
+    "ieltsToefl": "IELTS/TOEFL",
+    "tuition": "Taxas de Mensalidade"
+  },
+  "home": {
+    "hero": {
+      "title": "Sua Portal para Educacao Global",
+      "subtitle": "Descubra bolsas, universidades e cursos ao redor do mundo",
+      "cta": "Comece Sua Jornada",
+      "secondary": "Explorar Bolsas"
+    },
+    "features": {
+      "title": "Por Que Escolher GlobalScholar AI?",
+      "scholarshipMatch": {
+        "title": "Correspondencia Inteligente de Bolsas",
+        "description": "Recomendacoes baseadas em IA personalizadas para seu perfil"
+      },
+      "universitySearch": {
+        "title": "Explorador de Universidades",
+        "description": "Pesquise em mais de 10.000 universidades em 190+ paises"
+      },
+      "applicationTracker": {
+        "title": "Rastreador de Inscricoes",
+        "description": "Acompanhe suas inscricoes de bolsas em um so lugar"
+      },
+      "community": {
+        "title": "Comunidade Global",
+        "description": "Conecte-se com bolsistas e mentores ao redor do mundo"
+      },
+      "deadlineTracker": {
+        "title": "Rastreador de Prazos Inteligente",
+        "description": "Nunca mais perca um prazo com lembretes inteligentes e um calendario visual de todas as suas inscricoes."
+      },
+      "verifiedListings": {
+        "title": "Listagens Verificadas",
+        "description": "Cada bolsa e verificada pela nossa equipe e sistema de IA para garantir precisao e legitimidade."
+      },
+      "documentBuilder": {
+        "title": "Construtor de Documentos",
+        "description": "Gerador de curriculo com IA e verificador de documentos para cada inscricao de bolsa."
+      }
+    },
+    "stats": {
+      "scholarships": "Bolsas",
+      "universities": "Universidades",
+      "countries": "Paises",
+      "students": "Estudantes Ajudados"
+    },
+    "aiToolsBadge": "Ferramentas de IA",
+    "howItWorks": {
+      "title": "Como Funciona",
+      "step1": {
+        "title": "Crie Seu Perfil",
+        "description": "Conte-nos sobre sua educacao, objetivos e preferencias."
+      },
+      "step2": {
+        "title": "A IA Encontra Correspondencias",
+        "description": "Nosso algoritmo analisa mais de 500.000 bolsas e as classifica."
+      },
+      "step3": {
+        "title": "Inscreva-se com Confianca",
+        "description": "Use nossas ferramentas de IA para redigir redacoes e criar curriculos."
+      },
+      "step4": {
+        "title": "Acompanhe e Tenha Sucesso",
+        "description": "Monitore suas inscricoes e celebre quando receber ofertas."
+      }
+    },
+    "testimonials": {
+      "title": "O Que Nossos Estudantes Dizem",
+      "items": [
+        {
+          "name": "Amara Okafor",
+          "country": "Nigeria",
+          "university": "MIT, USA",
+          "quote": "GlobalScholar AI found me a fully funded PhD position I never knew existed!"
+        },
+        {
+          "name": "Rahul Sharma",
+          "country": "India",
+          "university": "University of Berlin, Germany",
+          "quote": "I asked the AI assistant about scholarships without IELTS and it found 15 perfect matches!"
+        },
+        {
+          "name": "Fatima Al-Hassan",
+          "country": "Pakistan",
+          "university": "University of Toronto, Canada",
+          "quote": "The deadline tracker saved me from missing two application deadlines."
+        }
+      ]
+    },
+    "ecosystem": {
+      "title": "O Ecossistema GlobalScholar",
+      "items": {
+        "search": {
+          "title": "GlobalScholar Search",
+          "description": "Descoberta de bolsas com IA"
+        },
+        "apply": {
+          "title": "GlobalScholar Apply",
+          "description": "Portal de inscricoes simplificado"
+        },
+        "visa": {
+          "title": "GlobalScholar Visa",
+          "description": "Assistencia em orientacao de vistos"
+        },
+        "career": {
+          "title": "GlobalScholar Career",
+          "description": "Orientacao de carreira"
+        },
+        "research": {
+          "title": "GlobalScholar Research",
+          "description": "Colaboracao em pesquisa"
+        },
+        "crm": {
+          "title": "GlobalScholar CRM",
+          "description": "Gestao universitaria"
+        }
+      }
+    },
+    "countries": {
+      "us": "United States",
+      "uk": "United Kingdom",
+      "germany": "Germany",
+      "canada": "Canada",
+      "australia": "Australia",
+      "france": "France",
+      "netherlands": "Netherlands",
+      "japan": "Japan",
+      "southKorea": "South Korea",
+      "turkey": "Turkey",
+      "china": "China",
+      "india": "India"
+    }
+  },
+  "scholarships": {
+    "title": "Explorador de Bolsas",
+    "subtitle": "Encontre a bolsa perfeita para sua educacao",
+    "results": "resultados",
+    "filters": {
+      "country": "Pais",
+      "degree": "Nivel de Graduacao",
+      "type": "Tipo de Bolsa",
+      "funding": "Nivel de Financiamento",
+      "deadline": "Prazo",
+      "search": "Pesquisar bolsas..."
+    },
+    "sort": {
+      "bestMatch": "Melhor Correspondencia",
+      "deadline": "Prazo",
+      "name": "Nome"
+    },
+    "clearFilters": "Limpar Filtros",
+    "noResults": "Nenhuma bolsa encontrada com seus criterios.",
+    "types": {
+      "merit": "Baseada em Merito",
+      "need": "Baseada em Necessidade",
+      "research": "Pesquisa",
+      "athletic": "Esportiva",
+      "government": "Governamental",
+      "university": "Universitaria",
+      "private": "Privada"
+    },
+    "funding": {
+      "fully_funded": "Totalmente Financiada",
+      "partial": "Financiamento Parcial",
+      "tuition_only": "Apenas Mensalidade",
+      "living_expenses": "Despesas de Vida"
+    },
+    "details": {
+      "deadline": "Prazo",
+      "amount": "Valor",
+      "eligibility": "Elegibilidade",
+      "requirements": "Requisitos",
+      "benefits": "Beneficios",
+      "apply": "Inscreva-se Agora",
+      "save": "Salvar Bolsa",
+      "share": "Compartilhar",
+      "tips": "Dicas de Inscricao",
+      "successRate": "Taxa de Sucesso",
+      "duration": "Duracao"
+    }
+  },
+  "universities": {
+    "title": "Explorador de Universidades",
+    "subtitle": "Descubra as melhores universidades do mundo",
+    "verified": "universidades verificadas",
+    "scholarships": "bolsas",
+    "globally": "globalmente",
+    "filters": {
+      "country": "Pais",
+      "type": "Tipo de Universidade",
+      "ranking": "Ranking",
+      "search": "Pesquisar universidades..."
+    },
+    "stats": {
+      "total": "Total de Universidades",
+      "countries": "Paises",
+      "verified": "Verificadas",
+      "students": "Estudantes Ativos"
+    },
+    "types": {
+      "public": "Publica",
+      "private": "Privada",
+      "research": "Pesquisa",
+      "community": "Comunitaria"
+    },
+    "details": {
+      "ranking": "Ranking Mundial",
+      "students": "Estudantes",
+      "faculty": "Corpo Docente",
+      "founded": "Fundada",
+      "website": "Visitar Site",
+      "programs": "Programas",
+      "scholarships": "Bolsas Disponiveis"
+    }
+  },
+  "rankings": {
+    "title": "Rankings Universitarios",
+    "subtitle": "Compare universidades ao redor do mundo",
+    "sources": {
+      "qs": "Rankings QS Mundiais",
+      "the": "Times Higher Education",
+      "shanghai": "Ranking de Xangai (ARWU)",
+      "composite": "Pontuacao Composta"
+    }
+  },
+  "resources": {
+    "title": "Recursos para Estudantes",
+    "subtitle": "Tudo que voce precisa para seus estudos no exterior",
+    "ielts": {
+      "title": "Preparacao IELTS",
+      "description": "Dicas e materiais de pratica para o exame IELTS"
+    },
+    "toefl": {
+      "title": "Preparacao TOEFL",
+      "description": "Recursos para preparacao do TOEFL"
+    },
+    "visa": {
+      "title": "Guia de Vistos",
+      "description": "Guias passo a passo para solicitacao de visto"
+    },
+    "costOfLiving": {
+      "title": "Custo de Vida",
+      "description": "Compare custos de vida entre paises"
+    },
+    "researchSupervisors": {
+      "title": "Orientadores de Pesquisa",
+      "description": "Encontre orientadores de pesquisa ao redor do mundo"
+    },
+    "admissions": {
+      "title": "Guia de Admissoes",
+      "description": "Orientacao para admissoes universitarias"
+    },
+    "tuition": {
+      "title": "Custos de Mensalidade",
+      "description": "Compare custos de mensalidade globalmente"
+    }
+  },
+  "ai": {
+    "tools": {
+      "title": "Ferramentas Inteligentes para Seu Sucesso",
+      "subtitle": "Nossa IA nao apenas encontra bolsas — ela analisa, prevê e guia voce em cada etapa da sua jornada educacional.",
+      "searchPlaceholder": "Pesquisar ferramentas de IA...",
+      "categories": {
+        "all": "Todas as Ferramentas",
+        "matching": "Correspondencia",
+        "documents": "Documentos",
+        "analysis": "Analise",
+        "planning": "Planejamento"
+      },
+      "popular": "Popular",
+      "tryNow": "Experimentar Agora",
+      "howItWorks": "Como Nossa IA Funciona",
+      "howItWorksDesc": "Nosso sistema de IA usa aprendizado de maquina avancado para analisar, prever e recomendar as melhores oportunidades para sua jornada educacional.",
+      "steps": {
+        "dataCollection": "Coleta de Dados",
+        "dataCollectionDesc": "Agregamos dados de mais de 50.000 universidades, 500.000 bolsas e milhoes de perfis de estudantes.",
+        "aiAnalysis": "Analise de IA",
+        "aiAnalysisDesc": "Nossos modelos de ML analisam seu perfil, preferencias e objetivos em nosso banco de dados abrangente.",
+        "smartMatching": "Correspondencia Inteligente",
+        "smartMatchingDesc": "Classificamos e pontuamos oportunidades com base em compatibilidade, probabilidade de sucesso e suas prioridades.",
+        "continuousLearning": "Aprendizado Continuo",
+        "continuousLearningDesc": "Nossa IA melhora a cada interacao, aprendendo com inscricoes bem-sucedidas e feedback dos usuarios."
+      },
+      "stats": {
+        "scholarshipsAnalyzed": "Bolsas Analisadas",
+        "studentsMatched": "Estudantes Correspondidos",
+        "successRate": "Taxa de Sucesso",
+        "countriesCovered": "Paises Cobertos"
+      },
+      "matcher": {
+        "title": "AI Scholarship Matcher",
+        "description": "Our advanced AI scans 500,000+ scholarships worldwide and ranks them by compatibility with your unique profile, academic record, and career goals.",
+        "features": {
+          "profileAnalysis": "Profile analysis",
+          "matchAccuracy": "95% match accuracy",
+          "realTimeUpdates": "Real-time updates",
+          "personalizedRanking": "Personalized ranking"
+        }
+      },
+      "documents": {
+        "title": "AI Document Analyzer",
+        "description": "Upload your SOP, CV, or essays and get instant AI feedback on content, structure, grammar, and alignment with scholarship requirements.",
+        "features": {
+          "instantFeedback": "Instant feedback",
+          "grammarCheck": "Grammar check",
+          "contentScoring": "Content scoring",
+          "improvementSuggestions": "Improvement suggestions"
+        }
+      },
+      "search": {
+        "description": "Ask our AI anything about scholarships, universities, and study abroad. Get personalized answers powered by DeepSeek AI."
+      }
+    },
+    "search": {
+      "title": "Pesquisa com IA",
+      "description": "Deixe a IA encontrar as melhores bolsas para voce",
+      "subtitle": "Ask anything about scholarships worldwide",
+      "welcomeMessage": "Hello! I'm your AI scholarship advisor. Tell me about your background and what you're looking for, and I'll find the best matching scholarships for you.\n\nYou can ask me things like:\n- What scholarships match my profile?\n- Find fully funded Master's programs in Germany\n- Which scholarships don't require IELTS?",
+      "inputPlaceholder": "Tell me about your background and what scholarship you're looking for...",
+      "analyzing": "Analyzing your query...",
+      "byCountry": "By Country",
+      "byDegree": "By Degree",
+      "fullyFunded": "Fully Funded",
+      "noIelts": "No IELTS"
+    },
+    "recommend": {
+      "title": "Recomendacoes Inteligentes",
+      "description": "Recomendacoes personalizadas de bolsas"
+    },
+    "matcher": {
+      "title": "Encontre a Correspondencia Perfeita de Bolsas",
+      "subtitle": "Nossa IA analisa seu perfil e encontra bolsas que correspondem as suas qualificacoes unicas com ate 95% de precisao.",
+      "profileTitle": "Seu Perfil",
+      "nationality": "Nacionalidade",
+      "selectCountry": "Selecionar pais",
+      "degreeLevel": "Nivel de Graduacao",
+      "selectDegree": "Selecionar graduacao",
+      "fieldOfStudy": "Area de Estudo",
+      "selectField": "Selecionar area",
+      "gpa": "GPA / CGPA",
+      "selectGpa": "Selecionar GPA",
+      "preferredCountries": "Paises Preferidos",
+      "countriesPlaceholder": "ex., Alemanha, Canada, Reino Unido, Australia",
+      "interests": "Interesses e Objetivos",
+      "interestsPlaceholder": "Conte-nos sobre seus objetivos de carreira, interesses de pesquisa ou requisitos especificos...",
+      "analyzing": "Analisando Seu Perfil...",
+      "findMatches": "Encontrar Minhas Correspondencias",
+      "foundMatches": "Encontradas {count} Correspondencias",
+      "applyNow": "Inscreva-se Agora",
+      "features": {
+        "profileAnalysis": "Profile analysis",
+        "matchAccuracy": "95% match accuracy",
+        "realTimeUpdates": "Real-time updates",
+        "personalizedRanking": "Personalized ranking"
+      }
+    },
+    "documents": {
+      "title": "Assistente de Documentos",
+      "description": "Ajuda da IA com seus documentos de inscricao",
+      "features": {
+        "instantFeedback": "Instant feedback",
+        "grammarCheck": "Grammar check",
+        "contentScoring": "Content scoring",
+        "improvementSuggestions": "Improvement suggestions"
+      }
+    },
+    "chatbot": {
+      "title": "Assistente IA",
+      "description": "Obtenha respostas instantaneas para suas perguntas"
+    },
+    "career": {
+      "title": "Preditor de Carreira com IA",
+      "description": "Preveja sua trajetoria de carreira e potencial de ganhos em todo o mundo."
+    },
+    "calculator": {
+      "title": "Calculadora de Sucesso com IA",
+      "description": "Calcule suas chances de ser selecionado para bolsas especificas."
+    },
+    "research": {
+      "title": "Correspondencia de Pesquisa com IA",
+      "description": "Encontre orientadores de pesquisa e oportunidades de financiamento."
+    },
+    "universityPredictor": {
+      "title": "Preditor de Universidades com IA",
+      "description": "Obtenha taxas de aceitacao previstas por IA e classificacoes de programas."
+    }
+  },
+  "research": {
+    "title": "Descubra Oportunidades de Pesquisa no Mundo Todo",
+    "subtitle": "Encontre orientadores de pesquisa, oportunidades de financiamento e parceiros de colaboracao em mais de 200 paises. Impulsionado por IA para corresponder aos seus interesses de pesquisa.",
+    "searchPlaceholder": "Pesquisar areas de pesquisa, orientadores ou financiamento...",
+    "search": "Pesquisar",
+    "popularAreas": "Areas de Pesquisa Populares",
+    "popularAreasDesc": "Explore oportunidades de pesquisa nas areas mais procuradas do mundo.",
+    "opportunities": "oportunidades",
+    "topSupervisors": "Principais Orientadores de Pesquisa",
+    "topSupervisorsDesc": "Conecte-se com pesquisadores lideres na sua area.",
+    "viewAll": "Ver Todos",
+    "publications": "publicacoes",
+    "citations": "citacoes",
+    "viewProfile": "Ver Perfil",
+    "funding": "Oportunidades de Financiamento de Pesquisa",
+    "fundingDesc": "Descubra bolsas, auxilios e financiamento para seus projetos de pesquisa.",
+    "amount": "Valor",
+    "deadline": "Prazo",
+    "learnMore": "Saiba Mais",
+    "aiTools": "Ferramentas de IA para Pesquisa",
+    "aiToolsDesc": "Aproveite nossas ferramentas de IA para acelerar sua jornada de pesquisa.",
+    "tools": {
+      "matcher": "Encontre orientadores e laboratorios que correspondam aos seus interesses de pesquisa",
+      "grantWriter": "Redacao assistida por IA para propostas de financiamento de pesquisa",
+      "publications": "Analise tendencias de publicacoes e encontre oportunidades de colaboracao"
+    }
+  },
+  "faqs": {
+    "title": "Perguntas Frequentes",
+    "subtitle": "Encontre respostas para perguntas comuns sobre bolsas, inscricoes e estudos no exterior.",
+    "searchPlaceholder": "Pesquisar perguntas...",
+    "categories": {
+      "all": "Todas",
+      "general": "Geral",
+      "scholarships": "Bolsas",
+      "applications": "Inscricoes",
+      "visas": "Vistos",
+      "financial": "Financeiro"
+    },
+    "stillHaveQuestions": "Ainda Tem Perguntas?",
+    "stillHaveQuestionsDesc": "Nao encontra o que procura? Fale com nossa equipe de suporte.",
+    "contactUs": "Fale Conosco"
+  },
+  "vision": {
+    "title": "Nossa Visao para 2040",
+    "subtitle": "Construindo o ecossistema educacional mais abrangente do mundo impulsionado por IA",
+    "roadmap": "Nosso Roteiro",
+    "milestones": "Marcos Importantes",
+    "competitiveAdvantages": "Vantagens Competitivas",
+    "joinJourney": "Junte-se a Nossa Jornada",
+    "joinJourneyDesc": "Faca parte do futuro da educacao global"
+  },
+  "auth": {
+    "login": {
+      "title": "Bem-vindo de Volta",
+      "subtitle": "Entre na sua conta",
+      "email": "Endereco de E-mail",
+      "password": "Senha",
+      "submit": "Entrar",
+      "forgot": "Esqueceu a Senha?",
+      "noAccount": "Nao tem uma conta?",
+      "register": "Cadastre-se"
+    },
+    "register": {
+      "title": "Criar Conta",
+      "subtitle": "Junte-se a nossa comunidade global de bolsas",
+      "name": "Nome Completo",
+      "email": "Endereco de E-mail",
+      "password": "Senha",
+      "confirmPassword": "Confirmar Senha",
+      "submit": "Criar Conta",
+      "hasAccount": "Ja tem uma conta?",
+      "login": "Entrar"
+    }
+  },
+  "profile": {
+    "title": "Meu Perfil",
+    "edit": "Editar Perfil",
+    "save": "Salvar Alteracoes",
+    "academic": {
+      "title": "Informacoes Academicas",
+      "degree": "Graduacao Atual",
+      "field": "Area de Estudo",
+      "gpa": "GPA",
+      "university": "Universidade"
+    },
+    "preferences": {
+      "title": "Preferencias",
+      "countries": "Paises Preferidos",
+      "interests": "Interesses",
+      "languages": "Idiomas"
+    }
+  },
+  "common": {
+    "loading": "Carregando...",
+    "error": "Algo deu errado",
+    "retry": "Tentar Novamente",
+    "save": "Salvar",
+    "cancel": "Cancelar",
+    "delete": "Excluir",
+    "edit": "Editar",
+    "view": "Ver",
+    "close": "Fechar",
+    "back": "Voltar",
+    "next": "Proximo",
+    "previous": "Anterior",
+    "showMore": "Mostrar Mais",
+    "showLess": "Mostrar Menos",
+    "noResults": "Nenhum resultado encontrado",
+    "pageNotFound": "Pagina Nao Encontrada",
+    "goHome": "Ir para o Inicio",
+    "darkMode": "Modo Escuro",
+    "lightMode": "Modo Claro",
+    "language": "Idioma"
+  },
+  "footer": {
+    "about": "Sobre GlobalScholar AI",
+    "aboutText": "Conectando estudantes a oportunidades de bolsas ao redor do mundo atraves de correspondencias baseadas em IA e recursos abrangentes.",
+    "quickLinks": "Links Rapidos",
+    "resourcesHeading": "Recursos",
+    "legal": "Legal",
+    "privacy": "Politica de Privacidade",
+    "terms": "Termos de Servico",
+    "contact": "Fale Conosco",
+    "newsletter": "Newsletter",
+    "newsletterText": "Mantenha-se atualizado com as ultimas bolsas",
+    "emailPlaceholder": "Digite seu e-mail",
+    "subscribe": "Inscrever-se",
+    "copyright": "© 2026 GlobalScholar AI. Todos os direitos reservados.",
+    "admin": "Admin",
+    "madeWith": "Feito com",
+    "forStudents": "para estudantes ao redor do mundo",
+    "platform": {
+      "scholarshipSearch": "Pesquisa de Bolsas",
+      "universityDirectory": "Diretorio de Universidades",
+      "aiTools": "Ferramentas de IA",
+      "researchHub": "Hub de Pesquisa",
+      "rankings": "Rankings"
+    },
+    "resources": {
+      "aiMatcher": "Correspondencia de Bolsas com IA",
+      "aiDocuments": "Analisador de Documentos com IA",
+      "aiCareer": "Preditor de Carreira com IA",
+      "visaGuide": "Guia de Vistos",
+      "faqs": "Perguntas Frequentes"
+    },
+    "countries": {
+      "us": "Estados Unidos",
+      "uk": "Reino Unido",
+      "germany": "Alemanha",
+      "canada": "Canada",
+      "australia": "Australia"
+    },
+    "company": {
+      "about": "Sobre Nos",
+      "vision": "Nossa Visao",
+      "contact": "Contato",
+      "privacy": "Politica de Privacidade",
+      "terms": "Termos de Servico"
+    },
+    "headings": {
+      "platform": "Pesquisa de Bolsas",
+      "resources": "Correspondencia de Bolsas com IA",
+      "countries": "Estados Unidos",
+      "company": "Sobre Nos"
+    }
+  }
+}

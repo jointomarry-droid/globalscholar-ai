@@ -1,0 +1,588 @@
+{
+  "nav": {
+    "home": "Startseite",
+    "scholarships": "Stipendien",
+    "universities": "Universitäten",
+    "courses": "Kurse",
+    "rankings": "Rankings",
+    "resources": "Ressourcen",
+    "community": "Gemeinschaft",
+    "about": "Über uns",
+    "contact": "Kontakt",
+    "search": "Suchen",
+    "login": "Anmelden",
+    "register": "Registrieren",
+    "profile": "Profil",
+    "dashboard": "Dashboard",
+    "logout": "Abmelden",
+    "admin": "Admin-Bereich",
+    "tools": "Werkzeuge",
+    "aiSearch": "KI-Suche",
+    "faqs": "FAQs",
+    "research": "Forschung",
+    "ai": {
+      "tools": "KI-Werkzeuge",
+      "matcher": "KI-Stipendien-Matcher",
+      "documents": "KI-Dokumentenanalysator",
+      "career": "KI-Karriereprognose",
+      "calculator": "KI-Erfolgsrechner",
+      "research": "KI-Forschungsmatcher"
+    },
+    "visa": "Visa-Ratgeber",
+    "costOfLiving": "Lebenshaltungskosten",
+    "ieltsToefl": "IELTS/TOEFL",
+    "tuition": "Studiengebühren"
+  },
+  "home": {
+    "hero": {
+      "title": "Ihr Tor zur Globalen Bildung",
+      "subtitle": "Entdecken Sie Stipendien, Universitäten und Kurse weltweit",
+      "cta": "Starten Sie Ihre Reise",
+      "secondary": "Stipendien Erkunden"
+    },
+    "features": {
+      "title": "Warum GlobalScholar AI Wählen?",
+      "scholarshipMatch": {
+        "title": "Intelligente Stipendien-Zuordnung",
+        "description": "KI-gestützte Empfehlungen, die auf Ihr Profil zugeschnitten sind"
+      },
+      "universitySearch": {
+        "title": "Universitäts-Explorer",
+        "description": "Durchsuchen Sie über 10.000 Universitäten in 190+ Ländern"
+      },
+      "applicationTracker": {
+        "title": "Bewerbungs-Tracker",
+        "description": "Verfolgen Sie Ihre Stipendien-Bewerbungen an einem Ort"
+      },
+      "community": {
+        "title": "Globale Gemeinschaft",
+        "description": "Verbinden Sie sich mit Stipendiaten und Mentoren weltweit"
+      },
+      "deadlineTracker": {
+        "title": "Intelligenter Fristen-Tracker",
+        "description": "Verpassen Sie nie wieder eine Frist mit intelligenten Erinnerungen und einem visuellen Kalender für all Ihre Bewerbungen."
+      },
+      "verifiedListings": {
+        "title": "Verifizierte Einträge",
+        "description": "Jedes Stipendium wird von unserem Team und KI-System verifiziert, um Genauigkeit und Legitimität zu gewährleisten."
+      },
+      "documentBuilder": {
+        "title": "Dokumentenersteller",
+        "description": "KI-gestützter Lebenslauf-Generator und Dokumenten-Checklisten-Generator für jede Stipendienbewerbung."
+      }
+    },
+    "stats": {
+      "scholarships": "Stipendien",
+      "universities": "Universitäten",
+      "countries": "Länder",
+      "students": "Unterstützte Schüler"
+    },
+    "aiToolsBadge": "KI-Werkzeuge",
+    "howItWorks": {
+      "title": "So funktioniert es",
+      "step1": {
+        "title": "Erstellen Sie Ihr Profil",
+        "description": "Erzählen Sie uns von Ihrer Ausbildung, Ihren Zielen und Vorlieben."
+      },
+      "step2": {
+        "title": "KI findet Übereinstimmungen",
+        "description": "Unser Algorithmus durchsucht 500.000+ Stipendien und rangiert sie."
+      },
+      "step3": {
+        "title": "Bewerben Sie sich mit Zuversicht",
+        "description": "Nutzen Sie unsere KI-Werkzeuge, um Aufsätze zu verfassen und Lebensläufe zu erstellen."
+      },
+      "step4": {
+        "title": "Verfolgen Sie & Erfolgreich sein",
+        "description": "Überwachen Sie Ihre Bewerbungen und feiern Sie, wenn Sie Angebote erhalten."
+      }
+    },
+    "testimonials": {
+      "title": "Was unsere Schüler sagen",
+      "items": [
+        {
+          "name": "Amara Okafor",
+          "country": "Nigeria",
+          "university": "MIT, USA",
+          "quote": "GlobalScholar AI found me a fully funded PhD position I never knew existed!"
+        },
+        {
+          "name": "Rahul Sharma",
+          "country": "India",
+          "university": "University of Berlin, Germany",
+          "quote": "I asked the AI assistant about scholarships without IELTS and it found 15 perfect matches!"
+        },
+        {
+          "name": "Fatima Al-Hassan",
+          "country": "Pakistan",
+          "university": "University of Toronto, Canada",
+          "quote": "The deadline tracker saved me from missing two application deadlines."
+        }
+      ]
+    },
+    "ecosystem": {
+      "title": "Das GlobalScholar-Ökosystem",
+      "items": {
+        "search": {
+          "title": "GlobalScholar Search",
+          "description": "KI-gestützte Stipendienentdeckung"
+        },
+        "apply": {
+          "title": "GlobalScholar Apply",
+          "description": "Optimiertes Bewerbungsportal"
+        },
+        "visa": {
+          "title": "GlobalScholar Visa",
+          "description": "Visaberatungsunterstützung"
+        },
+        "career": {
+          "title": "GlobalScholar Career",
+          "description": "Karriereberatungsunterstützung"
+        },
+        "research": {
+          "title": "GlobalScholar Research",
+          "description": "Forschungszusammenarbeit"
+        },
+        "crm": {
+          "title": "GlobalScholar CRM",
+          "description": "Universitätsverwaltung"
+        }
+      }
+    },
+    "countries": {
+      "us": "United States",
+      "uk": "United Kingdom",
+      "germany": "Germany",
+      "canada": "Canada",
+      "australia": "Australia",
+      "france": "France",
+      "netherlands": "Netherlands",
+      "japan": "Japan",
+      "southKorea": "South Korea",
+      "turkey": "Turkey",
+      "china": "China",
+      "india": "India"
+    }
+  },
+  "scholarships": {
+    "title": "Stipendien-Explorer",
+    "subtitle": "Finden Sie das perfekte Stipendium für Ihre Ausbildung",
+    "results": "Ergebnisse",
+    "filters": {
+      "country": "Land",
+      "degree": "Abschlussniveau",
+      "type": "Stipendientyp",
+      "funding": "Finanzierungsniveau",
+      "deadline": "Frist",
+      "search": "Stipendien suchen..."
+    },
+    "sort": {
+      "bestMatch": "Beste Übereinstimmung",
+      "deadline": "Frist",
+      "name": "Name"
+    },
+    "clearFilters": "Filter Zurücksetzen",
+    "noResults": "Keine Stipendien gefunden, die Ihren Kriterien entsprechen.",
+    "types": {
+      "merit": "Leistungsorientiert",
+      "need": "Bedarfsorientiert",
+      "research": "Forschung",
+      "athletic": "Sport",
+      "government": "Staatlich",
+      "university": "Universitär",
+      "private": "Privat"
+    },
+    "funding": {
+      "fully_funded": "Vollständig Finanziert",
+      "partial": "Teilfinanzierung",
+      "tuition_only": "Nur Studiengebühren",
+      "living_expenses": "Lebenshaltungskosten"
+    },
+    "details": {
+      "deadline": "Frist",
+      "amount": "Betrag",
+      "eligibility": "Berechtigung",
+      "requirements": "Anforderungen",
+      "benefits": "Vorteile",
+      "apply": "Jetzt Bewerben",
+      "save": "Stipendium Speichern",
+      "share": "Teilen",
+      "tips": "Bewerbungstipps",
+      "successRate": "Erfolgsrate",
+      "duration": "Dauer"
+    }
+  },
+  "universities": {
+    "title": "Universitäts-Explorer",
+    "subtitle": "Entdecken Sie Spitzenuniversitäten weltweit",
+    "verified": "verifizierte Universitäten",
+    "scholarships": "Stipendien",
+    "globally": "weltweit",
+    "filters": {
+      "country": "Land",
+      "type": "Universitätstyp",
+      "ranking": "Ranking",
+      "search": "Universitäten suchen..."
+    },
+    "stats": {
+      "total": "Universitäten Gesamt",
+      "countries": "Länder",
+      "verified": "Verifiziert",
+      "students": "Aktive Studierende"
+    },
+    "types": {
+      "public": "Öffentlich",
+      "private": "Privat",
+      "research": "Forschung",
+      "community": "Gemeinschaft"
+    },
+    "details": {
+      "ranking": "Weltweites Ranking",
+      "students": "Studenten",
+      "faculty": "Fakultät",
+      "founded": "Gegründet",
+      "website": "Webseite Besuchen",
+      "programs": "Programme",
+      "scholarships": "Verfügbare Stipendien"
+    }
+  },
+  "rankings": {
+    "title": "Universitäts-Rankings",
+    "subtitle": "Vergleichen Sie Universitäten weltweit",
+    "sources": {
+      "qs": "QS Welt-Rankings",
+      "the": "Times Higher Education",
+      "shanghai": "Shanghai-Ranking (ARWU)",
+      "composite": "Gesamtpunktzahl"
+    }
+  },
+  "resources": {
+    "title": "Studenten-Ressourcen",
+    "subtitle": "Alles, was Sie für Ihr Auslandsstudium brauchen",
+    "ielts": {
+      "title": "IELTS Vorbereitung",
+      "description": "Tipps und Übungsmaterialien für die IELTS-Prüfung"
+    },
+    "toefl": {
+      "title": "TOEFL Vorbereitung",
+      "description": "Ressourcen für die TOEFL-Prüfungsvorbereitung"
+    },
+    "visa": {
+      "title": "Visa-Ratgeber",
+      "description": "Schritt-für-Schritt-Visaantragsanleitungen"
+    },
+    "costOfLiving": {
+      "title": "Lebenshaltungskosten",
+      "description": "Vergleichen Sie Lebenshaltungskosten zwischen Ländern"
+    },
+    "researchSupervisors": {
+      "title": "Forschungsbetreuer",
+      "description": "Finden Sie Forschungsbetreuer weltweit"
+    },
+    "admissions": {
+      "title": "Zulassungsratgeber",
+      "description": "Anleitung für Hochschulzulassungen"
+    },
+    "tuition": {
+      "title": "Studiengebühren",
+      "description": "Vergleichen Sie Studiengebühren weltweit"
+    }
+  },
+  "ai": {
+    "tools": {
+      "title": "Intelligente Werkzeuge für Ihren Erfolg",
+      "subtitle": "Unsere KI findet nicht nur Stipendien — sie analysiert, prognostiziert und begleitet Sie durch jeden Schritt Ihrer Bildungsreise.",
+      "searchPlaceholder": "KI-Werkzeuge suchen...",
+      "categories": {
+        "all": "Alle Werkzeuge",
+        "matching": "Zuordnung",
+        "documents": "Dokumente",
+        "analysis": "Analyse",
+        "planning": "Planung"
+      },
+      "popular": "Beliebt",
+      "tryNow": "Jetzt Ausprobieren",
+      "howItWorks": "So funktioniert unsere KI",
+      "howItWorksDesc": "Unsere KI nutzt fortschrittliches maschinelles Lernen, um die besten Möglichkeiten für Ihre Bildungsreise zu analysieren, vorherzusagen und zu empfehlen.",
+      "steps": {
+        "dataCollection": "Datenerfassung",
+        "dataCollectionDesc": "Wir aggregieren Daten von 50.000+ Universitäten, 500.000+ Stipendien und Millionen von Schülerprofilen.",
+        "aiAnalysis": "KI-Analyse",
+        "aiAnalysisDesc": "Unsere ML-Modelle analysieren Ihr Profil, Ihre Vorlieben und Ziele gegen unsere umfassende Datenbank.",
+        "smartMatching": "Intelligente Zuordnung",
+        "smartMatchingDesc": "Wir bewerten und bewerten Möglichkeiten basierend auf Kompatibilität, Erfolgswahrscheinlichkeit und Ihren Prioritäten.",
+        "continuousLearning": "Kontinuierliches Lernen",
+        "continuousLearningDesc": "Unsere KI verbessert sich mit jeder Interaktion und lernt aus erfolgreichen Bewerbungen und Benutzerfeedback."
+      },
+      "stats": {
+        "scholarshipsAnalyzed": "Analysierte Stipendien",
+        "studentsMatched": "Zugeordnete Schüler",
+        "successRate": "Erfolgsrate",
+        "countriesCovered": "Abgedeckte Länder"
+      },
+      "matcher": {
+        "title": "AI Scholarship Matcher",
+        "description": "Our advanced AI scans 500,000+ scholarships worldwide and ranks them by compatibility with your unique profile, academic record, and career goals.",
+        "features": {
+          "profileAnalysis": "Profile analysis",
+          "matchAccuracy": "95% match accuracy",
+          "realTimeUpdates": "Real-time updates",
+          "personalizedRanking": "Personalized ranking"
+        }
+      },
+      "documents": {
+        "title": "AI Document Analyzer",
+        "description": "Upload your SOP, CV, or essays and get instant AI feedback on content, structure, grammar, and alignment with scholarship requirements.",
+        "features": {
+          "instantFeedback": "Instant feedback",
+          "grammarCheck": "Grammar check",
+          "contentScoring": "Content scoring",
+          "improvementSuggestions": "Improvement suggestions"
+        }
+      },
+      "search": {
+        "description": "Ask our AI anything about scholarships, universities, and study abroad. Get personalized answers powered by DeepSeek AI."
+      }
+    },
+    "search": {
+      "title": "KI-gestützte Suche",
+      "description": "Lassen Sie die KI die besten Stipendien für Sie finden",
+      "subtitle": "Ask anything about scholarships worldwide",
+      "welcomeMessage": "Hello! I'm your AI scholarship advisor. Tell me about your background and what you're looking for, and I'll find the best matching scholarships for you.\n\nYou can ask me things like:\n- What scholarships match my profile?\n- Find fully funded Master's programs in Germany\n- Which scholarships don't require IELTS?",
+      "inputPlaceholder": "Tell me about your background and what scholarship you're looking for...",
+      "analyzing": "Analyzing your query...",
+      "byCountry": "By Country",
+      "byDegree": "By Degree",
+      "fullyFunded": "Fully Funded",
+      "noIelts": "No IELTS"
+    },
+    "recommend": {
+      "title": "Intelligente Empfehlungen",
+      "description": "Personalisierte Stipendienempfehlungen"
+    },
+    "matcher": {
+      "title": "Finden Sie Ihr Perfektes Stipendium",
+      "subtitle": "Unsere KI analysiert Ihr Profil und findet Stipendien, die zu Ihren einzigartigen Qualifikationen passen — mit bis zu 95% Genauigkeit.",
+      "profileTitle": "Ihr Profil",
+      "nationality": "Nationalität",
+      "selectCountry": "Land auswählen",
+      "degreeLevel": "Abschlussniveau",
+      "selectDegree": "Abschluss auswählen",
+      "fieldOfStudy": "Studienfach",
+      "selectField": "Fach auswählen",
+      "gpa": "GPA / CGPA",
+      "selectGpa": "GPA auswählen",
+      "preferredCountries": "Bevorzugte Länder",
+      "countriesPlaceholder": "z.B. Deutschland, Kanada, Großbritannien, Australien",
+      "interests": "Interessen & Ziele",
+      "interestsPlaceholder": "Erzählen Sie uns von Ihren Karrierezielen, Forschungsinteressen oder spezifischen Anforderungen...",
+      "analyzing": "Ihr Profil wird analysiert...",
+      "findMatches": "Übereinstimmungen Finden",
+      "foundMatches": "{count} Übereinstimmungen Gefunden",
+      "applyNow": "Jetzt Bewerben",
+      "features": {
+        "profileAnalysis": "Profile analysis",
+        "matchAccuracy": "95% match accuracy",
+        "realTimeUpdates": "Real-time updates",
+        "personalizedRanking": "Personalized ranking"
+      }
+    },
+    "documents": {
+      "title": "Dokumenten-Assistent",
+      "description": "KI-Hilfe für Ihre Bewerbungsdokumente",
+      "features": {
+        "instantFeedback": "Instant feedback",
+        "grammarCheck": "Grammar check",
+        "contentScoring": "Content scoring",
+        "improvementSuggestions": "Improvement suggestions"
+      }
+    },
+    "chatbot": {
+      "title": "KI-Assistent",
+      "description": "Erhalten Sie sofortige Antworten auf Ihre Fragen"
+    },
+    "career": {
+      "title": "KI-Karriereprognose",
+      "description": "Prognostizieren Sie Ihre Karriereentwicklung und Ihr Verdienstpotenzial weltweit."
+    },
+    "calculator": {
+      "title": "KI-Erfolgsrechner",
+      "description": "Berechnen Sie Ihre Chancen, für bestimmte Stipendien ausgewählt zu werden."
+    },
+    "research": {
+      "title": "KI-Forschungsmatcher",
+      "description": "Finden Sie Forschungsbetreuer und Fördermöglichkeiten."
+    },
+    "universityPredictor": {
+      "title": "KI-Universitätsprognose",
+      "description": "Erhalten Sie KI-vorhergesagte Zulassungsquoten und Programm-Rankings."
+    }
+  },
+  "research": {
+    "title": "Entdecken Sie Forschungsmöglichkeiten Weltweit",
+    "subtitle": "Finden Sie Forschungsbetreuer, Fördermöglichkeiten und Kooperationspartner in über 200 Ländern. KI-gestützt, um Ihre Forschungsinteressen zuzuordnen.",
+    "searchPlaceholder": "Forschungsbereiche, Betreuer oder Förderung suchen...",
+    "search": "Suchen",
+    "popularAreas": "Beliebte Forschungsbereiche",
+    "popularAreasDesc": "Entdecken Sie Forschungsmöglichkeiten in den gefragtesten Bereichen weltweit.",
+    "opportunities": "Möglichkeiten",
+    "topSupervisors": "Führende Forschungsbetreuer",
+    "topSupervisorsDesc": "Verbinden Sie sich mit führenden Forschern in Ihrem Fachgebiet.",
+    "viewAll": "Alle Ansehen",
+    "publications": "Publikationen",
+    "citations": "Zitierungen",
+    "viewProfile": "Profil Ansehen",
+    "funding": "Forschungsfördermöglichkeiten",
+    "fundingDesc": "Entdecken Sie Stipendien, Stipendien und Förderung für Ihre Forschungsprojekte.",
+    "amount": "Betrag",
+    "deadline": "Frist",
+    "learnMore": "Mehr Erfahren",
+    "aiTools": "KI-Forschungswerkzeuge",
+    "aiToolsDesc": "Nutzen Sie unsere KI-Werkzeuge, um Ihre Forschungsreise zu beschleunigen.",
+    "tools": {
+      "matcher": "Finden Sie Betreuer und Labore, die zu Ihren Forschungsinteressen passen",
+      "grantWriter": "KI-gestütztes Schreiben von Forschungsanträgen",
+      "publications": "Analysieren Sie Publikationstrends und finden Sie Kooperationsmöglichkeiten"
+    }
+  },
+  "faqs": {
+    "title": "Häufig Gestellte Fragen",
+    "subtitle": "Finden Sie Antworten auf häufige Fragen zu Stipendien, Bewerbungen und dem Studium im Ausland.",
+    "searchPlaceholder": "Fragen suchen...",
+    "categories": {
+      "all": "Alle",
+      "general": "Allgemein",
+      "scholarships": "Stipendien",
+      "applications": "Bewerbungen",
+      "visas": "Visa",
+      "financial": "Finanziell"
+    },
+    "stillHaveQuestions": "Noch Fragen?",
+    "stillHaveQuestionsDesc": "Können Sie nicht finden, wonach Sie suchen? Kontaktieren Sie unser Support-Team.",
+    "contactUs": "Kontaktieren Sie Uns"
+  },
+  "vision": {
+    "title": "Unsere Vision für 2040",
+    "subtitle": "Aufbau des umfassendsten KI-gestützten Bildungsökosystems der Welt",
+    "roadmap": "Unser Fahrplan",
+    "milestones": "Wichtige Meilensteine",
+    "competitiveAdvantages": "Wettbewerbsvorteile",
+    "joinJourney": "Reisen Sie mit Uns",
+    "joinJourneyDesc": "Teil der Zukunft der globalen Bildung sein"
+  },
+  "auth": {
+    "login": {
+      "title": "Willkommen Zurück",
+      "subtitle": "Melden Sie sich bei Ihrem Konto an",
+      "email": "E-Mail-Adresse",
+      "password": "Passwort",
+      "submit": "Anmelden",
+      "forgot": "Passwort Vergessen?",
+      "noAccount": "Haben Sie kein Konto?",
+      "register": "Registrieren"
+    },
+    "register": {
+      "title": "Konto Erstellen",
+      "subtitle": "Treten Sie unserer globalen Stipendien-Gemeinschaft bei",
+      "name": "Vollständiger Name",
+      "email": "E-Mail-Adresse",
+      "password": "Passwort",
+      "confirmPassword": "Passwort Bestätigen",
+      "submit": "Konto Erstellen",
+      "hasAccount": "Haben Sie bereits ein Konto?",
+      "login": "Anmelden"
+    }
+  },
+  "profile": {
+    "title": "Mein Profil",
+    "edit": "Profil Bearbeiten",
+    "save": "Änderungen Speichern",
+    "academic": {
+      "title": "Akademische Informationen",
+      "degree": "Aktueller Abschluss",
+      "field": "Studienfach",
+      "gpa": "GPA",
+      "university": "Universität"
+    },
+    "preferences": {
+      "title": "Präferenzen",
+      "countries": "Bevorzugte Länder",
+      "interests": "Interessen",
+      "languages": "Sprachen"
+    }
+  },
+  "common": {
+    "loading": "Laden...",
+    "error": "Etwas ist schiefgelaufen",
+    "retry": "Erneut Versuchen",
+    "save": "Speichern",
+    "cancel": "Abbrechen",
+    "delete": "Löschen",
+    "edit": "Bearbeiten",
+    "view": "Ansehen",
+    "close": "Schließen",
+    "back": "Zurück",
+    "next": "Weiter",
+    "previous": "Zurück",
+    "showMore": "Mehr Anzeigen",
+    "showLess": "Weniger Anzeigen",
+    "noResults": "Keine Ergebnisse gefunden",
+    "pageNotFound": "Seite Nicht Gefunden",
+    "goHome": "Zur Startseite",
+    "darkMode": "Dunkler Modus",
+    "lightMode": "Heller Modus",
+    "language": "Sprache"
+  },
+  "footer": {
+    "about": "Über GlobalScholar AI",
+    "aboutText": "Verbindet Schüler mit Stipendienmöglichkeiten weltweit durch KI-gestützte Zuordnung und umfassende Ressourcen.",
+    "quickLinks": "Schnelllinks",
+    "resourcesHeading": "Ressourcen",
+    "legal": "Rechtliches",
+    "privacy": "Datenschutzrichtlinie",
+    "terms": "Nutzungsbedingungen",
+    "contact": "Kontaktieren Sie Uns",
+    "newsletter": "Newsletter",
+    "newsletterText": "Bleiben Sie über die neuesten Stipendien informiert",
+    "emailPlaceholder": "Geben Sie Ihre E-Mail ein",
+    "subscribe": "Abonnieren",
+    "copyright": "© 2026 GlobalScholar AI. Alle Rechte vorbehalten.",
+    "admin": "Admin",
+    "madeWith": "Gemacht mit",
+    "forStudents": "für Schüler weltweit",
+    "platform": {
+      "scholarshipSearch": "Stipendien-Suche",
+      "universityDirectory": "Universitätsverzeichnis",
+      "aiTools": "KI-Werkzeuge",
+      "researchHub": "Forschungszentrum",
+      "rankings": "Rankings"
+    },
+    "resources": {
+      "aiMatcher": "KI-Stipendien-Matcher",
+      "aiDocuments": "KI-Dokumentenanalysator",
+      "aiCareer": "KI-Karriereprognose",
+      "visaGuide": "Visa-Ratgeber",
+      "faqs": "FAQs"
+    },
+    "countries": {
+      "us": "Vereinigte Staaten",
+      "uk": "Vereinigtes Königreich",
+      "germany": "Deutschland",
+      "canada": "Kanada",
+      "australia": "Australien"
+    },
+    "company": {
+      "about": "Über Uns",
+      "vision": "Unsere Vision",
+      "contact": "Kontakt",
+      "privacy": "Datenschutzrichtlinie",
+      "terms": "Nutzungsbedingungen"
+    },
+    "headings": {
+      "platform": "Stipendien-Suche",
+      "resources": "KI-Stipendien-Matcher",
+      "countries": "Vereinigte Staaten",
+      "company": "Über Uns"
+    }
+  }
+}

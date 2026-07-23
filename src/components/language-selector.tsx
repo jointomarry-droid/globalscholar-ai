@@ -1,15 +1,19 @@
 "use client";
 
 import { useState, useRef, useEffect } from "react";
-import { useI18n } from "@/lib/i18n/context";
-import { LANGUAGES, type LanguageCode } from "@/lib/i18n/config";
+import { useLocale, useTranslations } from "next-intl";
+import { useRouter, usePathname } from "@/i18n/navigation";
+import { localeNames, type Locale } from "@/i18n/routing";
 
 export function LanguageSelector() {
-  const { language, setLanguage, t } = useI18n();
+  const t = useTranslations();
+  const locale = useLocale();
+  const router = useRouter();
+  const pathname = usePathname();
   const [isOpen, setIsOpen] = useState(false);
   const dropdownRef = useRef<HTMLDivElement>(null);
 
-  const currentLang = LANGUAGES.find((l) => l.code === language) || LANGUAGES[0];
+  const currentLang = localeNames[locale as Locale] || localeNames.en;
 
   useEffect(() => {
     function handleClickOutside(event: MouseEvent) {
@@ -22,6 +26,11 @@ export function LanguageSelector() {
     return () => document.removeEventListener("mousedown", handleClickOutside);
   }, []);
 
+  const handleLanguageChange = (newLocale: Locale) => {
+    router.replace(pathname, {locale: newLocale});
+    setIsOpen(false);
+  };
+
   return (
     <div className="relative" ref={dropdownRef}>
       <button
@@ -29,7 +38,7 @@ export function LanguageSelector() {
         className="flex items-center gap-2 px-3 py-2 rounded-lg border border-border/50 hover:border-primary/50 hover:bg-accent transition-all duration-200 text-sm"
         aria-label={t("common.language")}
       >
-        <span className="text-base">{currentLang.code === "en" ? "🌐" : currentLang.code === "ar" ? "🌐" : currentLang.code === "zh" ? "🌐" : "🌐"}</span>
+        <span className="text-base">🌐</span>
         <span className="hidden sm:inline font-medium">{currentLang.nativeName}</span>
         <svg
           className={`w-4 h-4 transition-transform ${isOpen ? "rotate-180" : ""}`}
@@ -43,25 +52,22 @@ export function LanguageSelector() {
 
       {isOpen && (
         <div className="absolute right-0 mt-2 w-56 rounded-xl border border-border/50 bg-background/95 backdrop-blur-xl shadow-xl z-50 py-2 max-h-80 overflow-y-auto">
-          {LANGUAGES.map((lang) => (
+          {Object.entries(localeNames).map(([code, info]) => (
             <button
-              key={lang.code}
-              onClick={() => {
-                setLanguage(lang.code as LanguageCode);
-                setIsOpen(false);
-              }}
+              key={code}
+              onClick={() => handleLanguageChange(code as Locale)}
               className={`w-full flex items-center gap-3 px-4 py-2.5 text-sm transition-colors ${
-                language === lang.code
+                locale === code
                   ? "bg-primary/10 text-primary font-medium"
                   : "hover:bg-accent text-foreground"
               }`}
             >
-              <span className="w-6 text-center font-medium">{lang.code.toUpperCase()}</span>
+              <span className="w-6 text-center font-medium">{code.toUpperCase()}</span>
               <div className="flex flex-col items-start">
-                <span className="font-medium">{lang.nativeName}</span>
-                <span className="text-xs text-muted-foreground">{lang.name}</span>
+                <span className="font-medium">{info.nativeName}</span>
+                <span className="text-xs text-muted-foreground">{info.name}</span>
               </div>
-              {lang.dir === "rtl" && (
+              {info.dir === "rtl" && (
                 <span className="ml-auto text-xs text-muted-foreground bg-muted px-1.5 py-0.5 rounded">
                   RTL
                 </span>

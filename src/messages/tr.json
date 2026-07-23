@@ -1,0 +1,588 @@
+{
+  "nav": {
+    "home": "Ana Sayfa",
+    "scholarships": "Burslar",
+    "universities": "Universiteler",
+    "courses": "Kurslar",
+    "rankings": "Siralama",
+    "resources": "Kaynaklar",
+    "community": "Topluluk",
+    "about": "Hakkinda",
+    "contact": "Iletisim",
+    "search": "Ara",
+    "login": "Giris Yap",
+    "register": "Kayit Ol",
+    "profile": "Profil",
+    "dashboard": "Panel",
+    "logout": "Cikis Yap",
+    "admin": "Yonetici Paneli",
+    "tools": "Araclar",
+    "aiSearch": "YZ Aramasi",
+    "faqs": "SSS",
+    "research": "Arastirma",
+    "ai": {
+      "tools": "YZ Araclari",
+      "matcher": "YZ Burs Eslestirici",
+      "documents": "YZ Belge Analizci",
+      "career": "YZ Kariyer Tahmini",
+      "calculator": "YZ Basari Hesaplayici",
+      "research": "YZ Arastirma Eslestirici"
+    },
+    "visa": "Vize Rehberi",
+    "costOfLiving": "Yasam Maliyeti",
+    "ieltsToefl": "IELTS/TOEFL",
+    "tuition": "Ogrenim Ucretleri"
+  },
+  "home": {
+    "hero": {
+      "title": "Global Egitiminize Acilan Kapi",
+      "subtitle": "Dunya genelinde burslar, universiteler ve kurslar kesfedin",
+      "cta": "Yolculugunuza Baslayin",
+      "secondary": "Burslari Kesfedin"
+    },
+    "features": {
+      "title": "Neden GlobalScholar AI Secmelisiniz?",
+      "scholarshipMatch": {
+        "title": "Akilli Burs Eslestirme",
+        "description": "Profilinize ozel Yapay Zeka destekli oneriler"
+      },
+      "universitySearch": {
+        "title": "Universite Kescisi",
+        "description": "190'dan fazla ulkede 10.000'den fazla universitede arama yapin"
+      },
+      "applicationTracker": {
+        "title": "Basvuru Takipcisi",
+        "description": "Burs basvurularinizi tek bir yerden takip edin"
+      },
+      "community": {
+        "title": "Global Topluluk",
+        "description": "Dunya genelinde bursiyerler ve mentorlerle baglanti kurun"
+      },
+      "deadlineTracker": {
+        "title": "Akilli Son Tarih Takipcisi",
+        "description": "Akilci hatirlatmalar ve tum basvurularinizin gorsel takvimiyle hicbir son tarih'i kacirmayin."
+      },
+      "verifiedListings": {
+        "title": "Dogrulanmis Ilanlar",
+        "description": "Her burs, dogruluk ve mevzuata uygunluk saglamak icin ekibimiz ve YZ sistemimiz tarafindan dogrulanmistir."
+      },
+      "documentBuilder": {
+        "title": "Belge Olusturucu",
+        "description": "Her burs basvurusu icin YZ destekli ozgecmis olusturucu ve belge kontrol listesi olusturucu."
+      }
+    },
+    "stats": {
+      "scholarships": "Burslar",
+      "universities": "Universiteler",
+      "countries": "Ulkeler",
+      "students": "Yardimci Olunan Ogrenciler"
+    },
+    "aiToolsBadge": "YZ Araclari",
+    "howItWorks": {
+      "title": "Nasil Calisir",
+      "step1": {
+        "title": "Profilinizi Olusturun",
+        "description": "Egitiminiz, hedefleriniz ve tercihleriniz hakkinda bize bilgi verin."
+      },
+      "step2": {
+        "title": "YZ Eslesmeleri Bulur",
+        "description": "Algoritmacimiz 500.000'den fazla bursu tarayip siralar."
+      },
+      "step3": {
+        "title": "Ozguvenle Basvurun",
+        "description": "YZ araclarimizi kullanarak kompozisyonlar yazin ve ozgecmis olusturun."
+      },
+      "step4": {
+        "title": "Takip Edin ve Basarili Olun",
+        "description": "Basvurularinizi izleyin ve teklifleri aldiginda kutlama yapin."
+      }
+    },
+    "testimonials": {
+      "title": "Ogrencilerimiz Ne Diyor",
+      "items": [
+        {
+          "name": "Amara Okafor",
+          "country": "Nigeria",
+          "university": "MIT, USA",
+          "quote": "GlobalScholar AI found me a fully funded PhD position I never knew existed!"
+        },
+        {
+          "name": "Rahul Sharma",
+          "country": "India",
+          "university": "University of Berlin, Germany",
+          "quote": "I asked the AI assistant about scholarships without IELTS and it found 15 perfect matches!"
+        },
+        {
+          "name": "Fatima Al-Hassan",
+          "country": "Pakistan",
+          "university": "University of Toronto, Canada",
+          "quote": "The deadline tracker saved me from missing two application deadlines."
+        }
+      ]
+    },
+    "ecosystem": {
+      "title": "GlobalScholar Ekosistemi",
+      "items": {
+        "search": {
+          "title": "GlobalScholar Arama",
+          "description": "YZ destekli burs kesfi"
+        },
+        "apply": {
+          "title": "GlobalScholar Basvuru",
+          "description": "Basitlestirilmis basvuru portali"
+        },
+        "visa": {
+          "title": "GlobalScholar Vize",
+          "description": "Vize rehberligi yardimi"
+        },
+        "career": {
+          "title": "GlobalScholar Kariyer",
+          "description": "Kariyer danismanligi destegi"
+        },
+        "research": {
+          "title": "GlobalScholar Arastirma",
+          "description": "Arastirma isbirligi"
+        },
+        "crm": {
+          "title": "GlobalScholar CRM",
+          "description": "Universite yonetimi"
+        }
+      }
+    },
+    "countries": {
+      "us": "United States",
+      "uk": "United Kingdom",
+      "germany": "Germany",
+      "canada": "Canada",
+      "australia": "Australia",
+      "france": "France",
+      "netherlands": "Netherlands",
+      "japan": "Japan",
+      "southKorea": "South Korea",
+      "turkey": "Turkey",
+      "china": "China",
+      "india": "India"
+    }
+  },
+  "scholarships": {
+    "title": "Burs Kescisi",
+    "subtitle": "Egitiminiz icin mukemmel bursu bulun",
+    "results": "sonuc",
+    "filters": {
+      "country": "Ulke",
+      "degree": "Derece Seviyesi",
+      "type": "Burs Turu",
+      "funding": "Finansman Seviyesi",
+      "deadline": "Son Tarih",
+      "search": "Burs ara..."
+    },
+    "sort": {
+      "bestMatch": "En Iyi Eslesme",
+      "deadline": "Son Tarih",
+      "name": "Ad"
+    },
+    "clearFilters": "Filtreleri Temizle",
+    "noResults": "Kriterlerinize uygun burs bulunamadi.",
+    "types": {
+      "merit": "Basariya Dayali",
+      "need": "Ihtiyaca Dayali",
+      "research": "Arastirma",
+      "athletic": "Spor",
+      "government": "Hukumet",
+      "university": "Universite",
+      "private": "Ozel"
+    },
+    "funding": {
+      "fully_funded": "Tam Finansman",
+      "partial": "Kismi Finansman",
+      "tuition_only": "Sadece Ogrenim Ucreti",
+      "living_expenses": "Yasam Giderleri"
+    },
+    "details": {
+      "deadline": "Son Tarih",
+      "amount": "Tutar",
+      "eligibility": "Uygunluk",
+      "requirements": "Gereksinimler",
+      "benefits": "Avantajlar",
+      "apply": "Hemen Basvur",
+      "save": "Bursu Kaydet",
+      "share": "Paylas",
+      "tips": "Basvuru Ipuclari",
+      "successRate": "Basari Orani",
+      "duration": "Sure"
+    }
+  },
+  "universities": {
+    "title": "Universite Kescisi",
+    "subtitle": "Dunya capinda en iyi universiteleri kesfedin",
+    "verified": "dogrulanmis universite",
+    "scholarships": "burs",
+    "globally": "dunya capinda",
+    "filters": {
+      "country": "Ulke",
+      "type": "Universite Turu",
+      "ranking": "Siralama",
+      "search": "Universite ara..."
+    },
+    "stats": {
+      "total": "Toplam Universite",
+      "countries": "Ulke",
+      "verified": "Dogrulanmis",
+      "students": "Aktif Ogrenci"
+    },
+    "types": {
+      "public": "Devlet",
+      "private": "Ozel",
+      "research": "Arastirma",
+      "community": "Topluluk"
+    },
+    "details": {
+      "ranking": "Dunya Siralamasi",
+      "students": "Ogrenciler",
+      "faculty": "Ogretim Uyeleri",
+      "founded": "Kurulus",
+      "website": "Web Sitesini Ziyaret Et",
+      "programs": "Programlar",
+      "scholarships": "Mevcut Burslar"
+    }
+  },
+  "rankings": {
+    "title": "Universite Siralamalari",
+    "subtitle": "Dunya capinda universiteleri karsilastirin",
+    "sources": {
+      "qs": "QS Dunya Siralamalari",
+      "the": "Times Higher Education",
+      "shanghai": "Shanghai Siralamasi (ARWU)",
+      "composite": "Kombine Puan"
+    }
+  },
+  "resources": {
+    "title": "Ogrenci Kaynaklari",
+    "subtitle": "Yurtdisinda egitim yolculugunuz icin ihtiyaciniz olan her sey",
+    "ielts": {
+      "title": "IELTS Hazirligi",
+      "description": "IELTS sinavi icin ipuclari ve pratik materyaller"
+    },
+    "toefl": {
+      "title": "TOEFL Hazirligi",
+      "description": "TOEFL sinav hazirligi icin kaynaklar"
+    },
+    "visa": {
+      "title": "Vize Rehberi",
+      "description": "Vize basvuru rehberleri adim adim"
+    },
+    "costOfLiving": {
+      "title": "Yasam Maliyeti",
+      "description": "Ulkeler arasindaki yasam maliyetlerini karsilastirin"
+    },
+    "researchSupervisors": {
+      "title": "Arastirma Danismanlari",
+      "description": "Dunya genelinde arastirma danismanlari bulun"
+    },
+    "admissions": {
+      "title": "Kabul Rehberi",
+      "description": "Universite kabul rehberligi"
+    },
+    "tuition": {
+      "title": "Ogrenim Ucretleri",
+      "description": "Dunya genelinde ogrenim ucretlerini karsilastirin"
+    }
+  },
+  "ai": {
+    "tools": {
+      "title": "Basariniz Icin Zekice Araclar",
+      "subtitle": "YZ'miz sadece burs bulmakla kalmaz; analiz eder, tahmin eder ve egitim yolculugunuzun her adiminda size rehberlik eder.",
+      "searchPlaceholder": "YZ araclarinda arama yapin...",
+      "categories": {
+        "all": "Tum Araclar",
+        "matching": "Eslestirme",
+        "documents": "Belgeler",
+        "analysis": "Analiz",
+        "planning": "Planlama"
+      },
+      "popular": "Populer",
+      "tryNow": "Simdi Dene",
+      "howItWorks": "YZ'miz Nasil Calisir",
+      "howItWorksDesc": "YZ sistemimiz, egitim yolculugunuz icin en iyi firsatlari analiz etmek, tahmin etmek ve onermek icin gelismis makine ogrenmesi kullanir.",
+      "steps": {
+        "dataCollection": "Veri Toplama",
+        "dataCollectionDesc": "50.000'den fazla universiteden, 500.000'den fazla burs ve milyonlarca ogrenci profilinden veri topluyoruz.",
+        "aiAnalysis": "YZ Analizi",
+        "aiAnalysisDesc": "ML modellerimiz profilinizi, tercihlerinizi ve hedeflerinizi kapsamli veri tabanimiz karsisinda analiz eder.",
+        "smartMatching": "Akilli Eslestirme",
+        "smartMatchingDesc": "Firsatlari uyumluluk, basari olasiligi ve onceliklerinize gore siraliyoruz.",
+        "continuousLearning": "Srekli Ogrenme",
+        "continuousLearningDesc": "YZ'miz her etkilesimle gelisir, basarili basvurulardan ve kullanici geri bildiriminden ogrenir."
+      },
+      "stats": {
+        "scholarshipsAnalyzed": "Analiz Edilen Burs",
+        "studentsMatched": "Eslestirilen Ogrenci",
+        "successRate": "Basari Orani",
+        "countriesCovered": "Kapsanan Ulke"
+      },
+      "matcher": {
+        "title": "AI Scholarship Matcher",
+        "description": "Our advanced AI scans 500,000+ scholarships worldwide and ranks them by compatibility with your unique profile, academic record, and career goals.",
+        "features": {
+          "profileAnalysis": "Profile analysis",
+          "matchAccuracy": "95% match accuracy",
+          "realTimeUpdates": "Real-time updates",
+          "personalizedRanking": "Personalized ranking"
+        }
+      },
+      "documents": {
+        "title": "AI Document Analyzer",
+        "description": "Upload your SOP, CV, or essays and get instant AI feedback on content, structure, grammar, and alignment with scholarship requirements.",
+        "features": {
+          "instantFeedback": "Instant feedback",
+          "grammarCheck": "Grammar check",
+          "contentScoring": "Content scoring",
+          "improvementSuggestions": "Improvement suggestions"
+        }
+      },
+      "search": {
+        "description": "Ask our AI anything about scholarships, universities, and study abroad. Get personalized answers powered by DeepSeek AI."
+      }
+    },
+    "search": {
+      "title": "Yapay Zeka Destekli Arama",
+      "description": "Yapay zekanin sizin icin en iyi burslari bulmasina izin verin",
+      "subtitle": "Ask anything about scholarships worldwide",
+      "welcomeMessage": "Hello! I'm your AI scholarship advisor. Tell me about your background and what you're looking for, and I'll find the best matching scholarships for you.\n\nYou can ask me things like:\n- What scholarships match my profile?\n- Find fully funded Master's programs in Germany\n- Which scholarships don't require IELTS?",
+      "inputPlaceholder": "Tell me about your background and what scholarship you're looking for...",
+      "analyzing": "Analyzing your query...",
+      "byCountry": "By Country",
+      "byDegree": "By Degree",
+      "fullyFunded": "Fully Funded",
+      "noIelts": "No IELTS"
+    },
+    "recommend": {
+      "title": "Akilli Oneriler",
+      "description": "Kisisellesitirilmis burs onerileri"
+    },
+    "matcher": {
+      "title": "Mukemmel Burs Eslesmenizi Bulun",
+      "subtitle": "YZ'miz profilinizi analiz eder ve %95'e varan dogrulukla benzersiz niteliklerinize uyan burslari bulur.",
+      "profileTitle": "Profiliniz",
+      "nationality": "Uyruk",
+      "selectCountry": "Ulke secin",
+      "degreeLevel": "Derece Seviyesi",
+      "selectDegree": "Derece secin",
+      "fieldOfStudy": "Calisma Alani",
+      "selectField": "Alan secin",
+      "gpa": "GPA / CGPA",
+      "selectGpa": "GPA secin",
+      "preferredCountries": "Tercih Edilen Ulkeler",
+      "countriesPlaceholder": "orn. Almanya, Kanada, Ingiltere, Avustralya",
+      "interests": "Ilgi Alanlari ve Hedefler",
+      "interestsPlaceholder": "Kariyer hedefleriniz, arastirma ilgi alanlariniz veya ozel gereksinimleriniz hakkinda bize anlatin...",
+      "analyzing": "Profiliniz Analiz Ediliyor...",
+      "findMatches": "Eslesmelerimi Bul",
+      "foundMatches": "{count} Eslesme Bulundu",
+      "applyNow": "Hemen Basvur",
+      "features": {
+        "profileAnalysis": "Profile analysis",
+        "matchAccuracy": "95% match accuracy",
+        "realTimeUpdates": "Real-time updates",
+        "personalizedRanking": "Personalized ranking"
+      }
+    },
+    "documents": {
+      "title": "Belge Asistani",
+      "description": "Basvuru belgeleriniz icin yapay zeka yardimi",
+      "features": {
+        "instantFeedback": "Instant feedback",
+        "grammarCheck": "Grammar check",
+        "contentScoring": "Content scoring",
+        "improvementSuggestions": "Improvement suggestions"
+      }
+    },
+    "chatbot": {
+      "title": "Yapay Zeka Asistani",
+      "description": "Sorulariniza aninda cevaplar alin"
+    },
+    "career": {
+      "title": "YZ Kariyer Tahmini",
+      "description": "Kariyer gidişatınızı ve dunya capinda kazanc potansiyelinizi tahmin edin."
+    },
+    "calculator": {
+      "title": "YZ Basari Hesaplayici",
+      "description": "Belirli burslar icin secilme sansinizi hesaplayin."
+    },
+    "research": {
+      "title": "YZ Arastirma Eslestirici",
+      "description": "Arastirma danismanlari ve finansman firsatlari bulun."
+    },
+    "universityPredictor": {
+      "title": "YZ Universite Tahminleyici",
+      "description": "YZ ile tahmin edilen kabul orani ve program siralamalari alin."
+    }
+  },
+  "research": {
+    "title": "Dunya Capinda Arastirma Firsatlarini Kesfedin",
+    "subtitle": "200'den fazla ulkede arastirma danismanlari, finansman firsatlari ve isbirligi ortaklari bulun. Arastirma ilgi alanlarinizi eslestirmek icin YZ ile desteklenmektedir.",
+    "searchPlaceholder": "Arastirma alanlari, danismanlar veya finansman icin arama yapin...",
+    "search": "Ara",
+    "popularAreas": "Populer Arastirma Alanlari",
+    "popularAreasDesc": "Dunya genelinde en cok talep goren alanlarda arastirma firsatlarini kesfedin.",
+    "opportunities": "firsat",
+    "topSupervisors": "One Cikan Arastirma Danismanlari",
+    "topSupervisorsDesc": "Alaninizda onde gelen arastirmacilarla baglanti kurun.",
+    "viewAll": "Tumunu Gor",
+    "publications": "yayin",
+    "citations": "atıfa",
+    "viewProfile": "Profili Gor",
+    "funding": "Arastirma Finansman Firsatlari",
+    "fundingDesc": "Arastirma projeleriniz icin hibeler, burslar ve finansman firsatlarini kesfedin.",
+    "amount": "Tutar",
+    "deadline": "Son Tarih",
+    "learnMore": "Daha Fazla Bilgi",
+    "aiTools": "YZ Arastirma Araclari",
+    "aiToolsDesc": "Arastirma yolculugunuzu hizlandirmak icin YZ araclarimizi kullanin.",
+    "tools": {
+      "matcher": "Arastirma ilgi alanlariniza uygun danismanlar ve laboratuvarlar bulun",
+      "grantWriter": "Arastirma hibe onceleri icin YZ destekli yazarlik",
+      "publications": "Yayin egilimlerini analiz edin ve isbirligi firsatlari bulun"
+    }
+  },
+  "faqs": {
+    "title": "Sik Sorulan Sorular",
+    "subtitle": "Burslar, basvurular ve yurtdisinda egitim hakkinda sik sorulan sorularin cevaplarini bulun.",
+    "searchPlaceholder": "Sorularda arama yapin...",
+    "categories": {
+      "all": "Tumu",
+      "general": "Genel",
+      "scholarships": "Burslar",
+      "applications": "Basvurular",
+      "visas": "Vizeler",
+      "financial": "Finansal"
+    },
+    "stillHaveQuestions": "Hala Sorulariniz mi Var?",
+    "stillHaveQuestionsDesc": "Aradiginizi bulamadiysaniz? Destek ekibimizle iletisime gecin.",
+    "contactUs": "Bize Ulasin"
+  },
+  "vision": {
+    "title": "2040 Icin Vizyonumuz",
+    "subtitle": "Dunyanin en kapsamli YZ destekli egitim ekosistemini insa ediyoruz",
+    "roadmap": "Yol Haritamiz",
+    "milestones": "Onemli Kilometre Taslari",
+    "competitiveAdvantages": "Rekabet Avantajlari",
+    "joinJourney": "Yolculugumaza Katilin",
+    "joinJourneyDesc": "Global egitimin geleceginin bir parcasi olun"
+  },
+  "auth": {
+    "login": {
+      "title": "Tekrar Hos Geldiniz",
+      "subtitle": "Hesabiniza giris yapin",
+      "email": "E-posta Adresi",
+      "password": "Sifre",
+      "submit": "Giris Yap",
+      "forgot": "Sifrenizi mi Unuttunuz?",
+      "noAccount": "Hesabiniz yok mu?",
+      "register": "Kayit Olun"
+    },
+    "register": {
+      "title": "Hesap Olustur",
+      "subtitle": "Global burs toplulugumaza katilin",
+      "name": "Ad Soyad",
+      "email": "E-posta Adresi",
+      "password": "Sifre",
+      "confirmPassword": "Sifreyi Onayla",
+      "submit": "Hesap Olustur",
+      "hasAccount": "Zaten hesabiniz var mi?",
+      "login": "Giris Yapin"
+    }
+  },
+  "profile": {
+    "title": "Profilim",
+    "edit": "Profili Duzenle",
+    "save": "Degisiklikleri Kaydet",
+    "academic": {
+      "title": "Akademik Bilgiler",
+      "degree": "Mevcut Derece",
+      "field": "Calisma Alani",
+      "gpa": "GPA",
+      "university": "Universite"
+    },
+    "preferences": {
+      "title": "Tercihler",
+      "countries": "Tercih Edilen Ulkeler",
+      "interests": "Ilgi Alanlari",
+      "languages": "Diller"
+    }
+  },
+  "common": {
+    "loading": "Yukleniyor...",
+    "error": "Bir seyler yanlis gitti",
+    "retry": "Tekrar Dene",
+    "save": "Kaydet",
+    "cancel": "Iptal",
+    "delete": "Sil",
+    "edit": "Duzenle",
+    "view": "Goruntule",
+    "close": "Kapat",
+    "back": "Geri",
+    "next": "Ileri",
+    "previous": "Onceki",
+    "showMore": "Daha Fazla Goster",
+    "showLess": "Daha Az Goster",
+    "noResults": "Sonuc bulunamadi",
+    "pageNotFound": "Sayfa Bulunamadi",
+    "goHome": "Ana Sayfaya Don",
+    "darkMode": "Karanlik Mod",
+    "lightMode": "Aydinlik Mod",
+    "language": "Dil"
+  },
+  "footer": {
+    "about": "GlobalScholar AI Hakkinda",
+    "aboutText": "Yapay zeka destekli eslestirme ve kapsamli kaynaklarla ogrencileri global burs firsatlariyla bulusturuyoruz.",
+    "quickLinks": "Hizli Baglantilar",
+    "resourcesHeading": "Kaynaklar",
+    "legal": "Yasal",
+    "privacy": "Gizlilik Politikasi",
+    "terms": "Kullanim Sartlari",
+    "contact": "Bize Ulasin",
+    "newsletter": "Bulten",
+    "newsletterText": "En son burslardan haberdar olun",
+    "emailPlaceholder": "E-postanizi girin",
+    "subscribe": "Abone Ol",
+    "copyright": "© 2026 GlobalScholar AI. Tum haklari saklidir.",
+    "admin": "Yonetici",
+    "madeWith": "Sevgiyle yapildi",
+    "forStudents": "dunya genelindeki ogrenciler icin",
+    "platform": {
+      "scholarshipSearch": "Burs Arama",
+      "universityDirectory": "Universite Dizini",
+      "aiTools": "YZ Araclari",
+      "researchHub": "Arastirma Merkezi",
+      "rankings": "Siralamalar"
+    },
+    "resources": {
+      "aiMatcher": "YZ Burs Eslestirici",
+      "aiDocuments": "YZ Belge Analizci",
+      "aiCareer": "YZ Kariyer Tahmini",
+      "visaGuide": "Vize Rehberi",
+      "faqs": "SSS"
+    },
+    "countries": {
+      "us": "Amerika Birlesik Devletleri",
+      "uk": "Birlesik Krallik",
+      "germany": "Almanya",
+      "canada": "Kanada",
+      "australia": "Avustralya"
+    },
+    "company": {
+      "about": "Hakkinda",
+      "vision": "Vizyonumuz",
+      "contact": "Iletisim",
+      "privacy": "Gizlilik Politikasi",
+      "terms": "Kullanim Sartlari"
+    },
+    "headings": {
+      "platform": "Burs Arama",
+      "resources": "YZ Burs Eslestirici",
+      "countries": "Amerika Birlesik Devletleri",
+      "company": "Hakkinda"
+    }
+  }
+}

@@ -1,10 +1,10 @@
 "use client";
 
 import { useState } from "react";
+import { useTranslations } from "next-intl";
 import { useRouter } from "next/navigation";
 import { Input } from "@/components/ui/input";
 import { Button } from "@/components/ui/button";
-import { useI18n } from "@/lib/i18n/context";
 import { Search, Sparkles, MapPin, GraduationCap, Banknote } from "lucide-react";
 
 interface SearchBarProps {
@@ -20,12 +20,12 @@ export function SearchBar({
   showFilters = false,
   onSearch,
 }: SearchBarProps) {
-  const { t } = useI18n();
+  const t = useTranslations();
   const [query, setQuery] = useState("");
   const [showAdvanced, setShowAdvanced] = useState(false);
   const router = useRouter();
 
-  const defaultPlaceholder = t("scholarships.filters.search") || "Search scholarships...";
+  const defaultPlaceholder = t("scholarships.filters.search");
   const searchPlaceholder = placeholder || defaultPlaceholder;
 
   const handleSearch = () => {
@@ -57,18 +57,17 @@ export function SearchBar({
             </div>
             <Button onClick={handleSearch} size="lg" className="h-12 px-6 rounded-xl">
               <Search className="h-5 w-5 mr-2" />
-              {t("nav.search") || "Search"}
+              {t("nav.search")}
             </Button>
           </div>
 
-          {/* Quick Filters */}
           {showFilters && (
             <div className="flex flex-wrap gap-2 mt-4 justify-center">
               {[
-                { icon: MapPin, label: t("scholarships.filters.country") || "By Country" },
-                { icon: GraduationCap, label: t("scholarships.filters.degree") || "By Degree" },
-                { icon: Banknote, label: t("scholarships.funding.fully_funded") || "Fully Funded" },
-                { icon: Sparkles, label: t("nav.aiSearch") || "AI Match" },
+                { icon: MapPin, label: t("scholarships.filters.country") },
+                { icon: GraduationCap, label: t("scholarships.filters.degree") },
+                { icon: Banknote, label: t("scholarships.funding.fully_funded") },
+                { icon: Sparkles, label: t("nav.aiSearch") },
               ].map((filter) => (
                 <button
                   key={filter.label}
@@ -100,7 +99,7 @@ export function SearchBar({
         </div>
         <Button onClick={handleSearch}>
           <Search className="h-4 w-4 mr-2" />
-          {t("nav.search") || "Search"}
+          {t("nav.search")}
         </Button>
       </div>
     </div>

@@ -3,22 +3,19 @@
 import Link from "next/link";
 import { useState } from "react";
 import { useRouter } from "next/navigation";
+import { useTranslations } from "next-intl";
 import { useTheme } from "./theme-provider";
 import { useAuthStore, useUIStore } from "@/store";
-import { useI18n } from "@/lib/i18n/context";
-import { cn } from "@/lib/utils/cn";
 import { NotificationBell } from "@/features/notifications";
 import { LanguageSelector } from "@/components/language-selector";
 import {
   GraduationCap,
-  Search,
   Menu,
   X,
   Sun,
   Moon,
   User,
   LogIn,
-  Globe,
   Sparkles,
   LogOut,
   LayoutDashboard,
@@ -26,7 +23,7 @@ import {
 } from "lucide-react";
 
 export function Header() {
-  const { t } = useI18n();
+  const t = useTranslations();
   const navLinks = [
     { label: t("nav.scholarships"), href: "/scholarships" },
     { label: t("nav.universities"), href: "/universities" },

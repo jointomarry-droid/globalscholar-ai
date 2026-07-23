@@ -1,0 +1,588 @@
+{
+  "nav": {
+    "home": "首页",
+    "scholarships": "奖学金",
+    "universities": "大学",
+    "courses": "课程",
+    "rankings": "排名",
+    "resources": "资源",
+    "community": "社区",
+    "about": "关于",
+    "contact": "联系",
+    "search": "搜索",
+    "login": "登录",
+    "register": "立即注册",
+    "profile": "个人资料",
+    "dashboard": "控制面板",
+    "logout": "退出登录",
+    "admin": "管理面板",
+    "tools": "工具",
+    "aiSearch": "AI搜索",
+    "faqs": "常见问题",
+    "research": "研究",
+    "ai": {
+      "tools": "AI工具",
+      "matcher": "AI奖学金匹配",
+      "documents": "AI文档分析",
+      "career": "AI职业预测",
+      "calculator": "AI成功计算器",
+      "research": "AI研究匹配"
+    },
+    "visa": "签证指南",
+    "costOfLiving": "生活成本",
+    "ieltsToefl": "雅思/托福",
+    "tuition": "学费"
+  },
+  "home": {
+    "hero": {
+      "title": "通往全球教育的大门",
+      "subtitle": "发现全球奖学金、大学和课程",
+      "cta": "开始您的旅程",
+      "secondary": "探索奖学金"
+    },
+    "features": {
+      "title": "为什么选择 GlobalScholar AI？",
+      "scholarshipMatch": {
+        "title": "智能奖学金匹配",
+        "description": "根据您的个人资料定制的AI推荐"
+      },
+      "universitySearch": {
+        "title": "大学探索器",
+        "description": "在190+国家搜索10,000+所大学"
+      },
+      "applicationTracker": {
+        "title": "申请追踪器",
+        "description": "在一个地方追踪您的奖学金申请"
+      },
+      "community": {
+        "title": "全球社区",
+        "description": "与全球的学者和导师建立联系"
+      },
+      "deadlineTracker": {
+        "title": "智能截止日期追踪",
+        "description": "通过智能提醒和可视化日历，永不错过任何申请截止日期。"
+      },
+      "verifiedListings": {
+        "title": "经过验证的列表",
+        "description": "每项奖学金都经过我们团队和AI系统的验证，以确保准确性和合法性。"
+      },
+      "documentBuilder": {
+        "title": "文档生成器",
+        "description": "AI驱动的简历生成器和针对每项奖学金申请的文档清单生成器。"
+      }
+    },
+    "stats": {
+      "scholarships": "奖学金",
+      "universities": "大学",
+      "countries": "国家",
+      "students": "帮助的学生"
+    },
+    "aiToolsBadge": "AI工具",
+    "howItWorks": {
+      "title": "运作方式",
+      "step1": {
+        "title": "创建您的个人资料",
+        "description": "告诉我们您的教育背景、目标和偏好。"
+      },
+      "step2": {
+        "title": "AI找到匹配",
+        "description": "我们的算法扫描500,000+项奖学金并进行排名。"
+      },
+      "step3": {
+        "title": "自信地申请",
+        "description": "使用我们的AI工具撰写文书和制作简历。"
+      },
+      "step4": {
+        "title": "跟踪并成功",
+        "description": "监控您的申请并在收到录取通知时庆祝。"
+      }
+    },
+    "testimonials": {
+      "title": "学生评价",
+      "items": [
+        {
+          "name": "Amara Okafor",
+          "country": "Nigeria",
+          "university": "MIT, USA",
+          "quote": "GlobalScholar AI found me a fully funded PhD position I never knew existed!"
+        },
+        {
+          "name": "Rahul Sharma",
+          "country": "India",
+          "university": "University of Berlin, Germany",
+          "quote": "I asked the AI assistant about scholarships without IELTS and it found 15 perfect matches!"
+        },
+        {
+          "name": "Fatima Al-Hassan",
+          "country": "Pakistan",
+          "university": "University of Toronto, Canada",
+          "quote": "The deadline tracker saved me from missing two application deadlines."
+        }
+      ]
+    },
+    "ecosystem": {
+      "title": "GlobalScholar生态系统",
+      "items": {
+        "search": {
+          "title": "GlobalScholar搜索",
+          "description": "AI驱动的奖学金发现"
+        },
+        "apply": {
+          "title": "GlobalScholar申请",
+          "description": "简化的申请门户"
+        },
+        "visa": {
+          "title": "GlobalScholar签证",
+          "description": "签证指导协助"
+        },
+        "career": {
+          "title": "GlobalScholar职业",
+          "description": "职业咨询支持"
+        },
+        "research": {
+          "title": "GlobalScholar研究",
+          "description": "研究合作"
+        },
+        "crm": {
+          "title": "GlobalScholar CRM",
+          "description": "大学管理"
+        }
+      }
+    },
+    "countries": {
+      "us": "United States",
+      "uk": "United Kingdom",
+      "germany": "Germany",
+      "canada": "Canada",
+      "australia": "Australia",
+      "france": "France",
+      "netherlands": "Netherlands",
+      "japan": "Japan",
+      "southKorea": "South Korea",
+      "turkey": "Turkey",
+      "china": "China",
+      "india": "India"
+    }
+  },
+  "scholarships": {
+    "title": "奖学金探索器",
+    "subtitle": "找到适合您教育的完美奖学金",
+    "results": "个结果",
+    "filters": {
+      "country": "国家",
+      "degree": "学位级别",
+      "type": "奖学金类型",
+      "funding": "资助级别",
+      "deadline": "截止日期",
+      "search": "搜索奖学金..."
+    },
+    "sort": {
+      "bestMatch": "最佳匹配",
+      "deadline": "截止日期",
+      "name": "名称"
+    },
+    "clearFilters": "清除筛选",
+    "noResults": "未找到符合您条件的奖学金。",
+    "types": {
+      "merit": "基于成绩",
+      "need": "基于需求",
+      "research": "研究",
+      "athletic": "体育",
+      "government": "政府",
+      "university": "大学",
+      "private": "私人"
+    },
+    "funding": {
+      "fully_funded": "全额资助",
+      "partial": "部分资助",
+      "tuition_only": "仅学费",
+      "living_expenses": "生活费"
+    },
+    "details": {
+      "deadline": "截止日期",
+      "amount": "金额",
+      "eligibility": "资格",
+      "requirements": "要求",
+      "benefits": "福利",
+      "apply": "立即申请",
+      "save": "保存奖学金",
+      "share": "分享",
+      "tips": "申请技巧",
+      "successRate": "成功率",
+      "duration": "持续时间"
+    }
+  },
+  "universities": {
+    "title": "大学探索器",
+    "subtitle": "发现全球顶尖大学",
+    "verified": "已认证大学",
+    "scholarships": "奖学金",
+    "globally": "全球覆盖",
+    "filters": {
+      "country": "国家",
+      "type": "大学类型",
+      "ranking": "排名",
+      "search": "搜索大学..."
+    },
+    "stats": {
+      "total": "大学总数",
+      "countries": "国家",
+      "verified": "已认证",
+      "students": "活跃学生"
+    },
+    "types": {
+      "public": "公立",
+      "private": "私立",
+      "research": "研究",
+      "community": "社区"
+    },
+    "details": {
+      "ranking": "世界排名",
+      "students": "学生",
+      "faculty": "教职员工",
+      "founded": "成立",
+      "website": "访问网站",
+      "programs": "项目",
+      "scholarships": "可用奖学金"
+    }
+  },
+  "rankings": {
+    "title": "大学排名",
+    "subtitle": "比较全球大学",
+    "sources": {
+      "qs": "QS世界排名",
+      "the": "泰晤士高等教育",
+      "shanghai": "上海排名（ARWU）",
+      "composite": "综合分数"
+    }
+  },
+  "resources": {
+    "title": "学生资源",
+    "subtitle": "留学之旅所需的一切",
+    "ielts": {
+      "title": "雅思备考",
+      "description": "雅思考试技巧和练习材料"
+    },
+    "toefl": {
+      "title": "托福备考",
+      "description": "托福考试准备资源"
+    },
+    "visa": {
+      "title": "签证指南",
+      "description": "分步签证申请指南"
+    },
+    "costOfLiving": {
+      "title": "生活成本",
+      "description": "比较各国生活成本"
+    },
+    "researchSupervisors": {
+      "title": "研究导师",
+      "description": "在全球寻找研究导师"
+    },
+    "admissions": {
+      "title": "入学指南",
+      "description": "大学入学指导"
+    },
+    "tuition": {
+      "title": "学费",
+      "description": "全球学费比较"
+    }
+  },
+  "ai": {
+    "tools": {
+      "title": "助力您成功的智能工具",
+      "subtitle": "我们的AI不仅仅查找奖学金——它分析、预测并指导您完成教育旅程的每一步。",
+      "searchPlaceholder": "搜索AI工具...",
+      "categories": {
+        "all": "所有工具",
+        "matching": "匹配",
+        "documents": "文档",
+        "analysis": "分析",
+        "planning": "规划"
+      },
+      "popular": "热门",
+      "tryNow": "立即试用",
+      "howItWorks": "AI工作原理",
+      "howItWorksDesc": "我们的AI系统使用先进的机器学习来分析、预测并推荐最适合您教育旅程的机会。",
+      "steps": {
+        "dataCollection": "数据收集",
+        "dataCollectionDesc": "我们整合来自50,000+所大学、500,000+项奖学金和数百万学生资料的数据。",
+        "aiAnalysis": "AI分析",
+        "aiAnalysisDesc": "我们的机器学习模型根据全面的数据库分析您的个人资料、偏好和目标。",
+        "smartMatching": "智能匹配",
+        "smartMatchingDesc": "我们根据兼容性、成功概率和您的优先级对机会进行排名和评分。",
+        "continuousLearning": "持续学习",
+        "continuousLearningDesc": "我们的AI通过每次交互不断改进，从成功的申请和用户反馈中学习。"
+      },
+      "stats": {
+        "scholarshipsAnalyzed": "已分析奖学金",
+        "studentsMatched": "已匹配学生",
+        "successRate": "成功率",
+        "countriesCovered": "覆盖国家"
+      },
+      "matcher": {
+        "title": "AI Scholarship Matcher",
+        "description": "Our advanced AI scans 500,000+ scholarships worldwide and ranks them by compatibility with your unique profile, academic record, and career goals.",
+        "features": {
+          "profileAnalysis": "Profile analysis",
+          "matchAccuracy": "95% match accuracy",
+          "realTimeUpdates": "Real-time updates",
+          "personalizedRanking": "Personalized ranking"
+        }
+      },
+      "documents": {
+        "title": "AI Document Analyzer",
+        "description": "Upload your SOP, CV, or essays and get instant AI feedback on content, structure, grammar, and alignment with scholarship requirements.",
+        "features": {
+          "instantFeedback": "Instant feedback",
+          "grammarCheck": "Grammar check",
+          "contentScoring": "Content scoring",
+          "improvementSuggestions": "Improvement suggestions"
+        }
+      },
+      "search": {
+        "description": "Ask our AI anything about scholarships, universities, and study abroad. Get personalized answers powered by DeepSeek AI."
+      }
+    },
+    "search": {
+      "title": "AI智能搜索",
+      "description": "让AI为您找到最好的奖学金",
+      "subtitle": "Ask anything about scholarships worldwide",
+      "welcomeMessage": "Hello! I'm your AI scholarship advisor. Tell me about your background and what you're looking for, and I'll find the best matching scholarships for you.\n\nYou can ask me things like:\n- What scholarships match my profile?\n- Find fully funded Master's programs in Germany\n- Which scholarships don't require IELTS?",
+      "inputPlaceholder": "Tell me about your background and what scholarship you're looking for...",
+      "analyzing": "Analyzing your query...",
+      "byCountry": "By Country",
+      "byDegree": "By Degree",
+      "fullyFunded": "Fully Funded",
+      "noIelts": "No IELTS"
+    },
+    "recommend": {
+      "title": "智能推荐",
+      "description": "个性化奖学金推荐"
+    },
+    "matcher": {
+      "title": "找到您的完美奖学金匹配",
+      "subtitle": "我们的AI分析您的个人资料，找到与您独特资格匹配的奖学金，准确率高达95%。",
+      "profileTitle": "您的个人资料",
+      "nationality": "国籍",
+      "selectCountry": "选择国家",
+      "degreeLevel": "学位级别",
+      "selectDegree": "选择学位",
+      "fieldOfStudy": "研究领域",
+      "selectField": "选择领域",
+      "gpa": "GPA / CGPA",
+      "selectGpa": "选择GPA",
+      "preferredCountries": "首选国家",
+      "countriesPlaceholder": "例如：德国、加拿大、英国、澳大利亚",
+      "interests": "兴趣与目标",
+      "interestsPlaceholder": "告诉我们您的职业目标、研究兴趣或特定要求...",
+      "analyzing": "正在分析您的资料...",
+      "findMatches": "查找匹配",
+      "foundMatches": "找到{count}个匹配",
+      "applyNow": "立即申请",
+      "features": {
+        "profileAnalysis": "Profile analysis",
+        "matchAccuracy": "95% match accuracy",
+        "realTimeUpdates": "Real-time updates",
+        "personalizedRanking": "Personalized ranking"
+      }
+    },
+    "documents": {
+      "title": "文档助手",
+      "description": "AI帮助您的申请文档",
+      "features": {
+        "instantFeedback": "Instant feedback",
+        "grammarCheck": "Grammar check",
+        "contentScoring": "Content scoring",
+        "improvementSuggestions": "Improvement suggestions"
+      }
+    },
+    "chatbot": {
+      "title": "AI助手",
+      "description": "即时获得问题的答案"
+    },
+    "career": {
+      "title": "AI职业预测",
+      "description": "预测您的职业轨迹和全球收入潜力。"
+    },
+    "calculator": {
+      "title": "AI成功计算器",
+      "description": "计算您获得特定奖学金的概率。"
+    },
+    "research": {
+      "title": "AI研究匹配",
+      "description": "查找研究导师和资助机会。"
+    },
+    "universityPredictor": {
+      "title": "AI大学预测",
+      "description": "获取AI预测的录取率和项目排名。"
+    }
+  },
+  "research": {
+    "title": "探索全球研究机会",
+    "subtitle": "在200+国家查找研究导师、资助机会和合作伙伴。AI驱动匹配您的研究兴趣。",
+    "searchPlaceholder": "搜索研究领域、导师或资助...",
+    "search": "搜索",
+    "popularAreas": "热门研究领域",
+    "popularAreasDesc": "探索全球最热门领域的研究机会。",
+    "opportunities": "个机会",
+    "topSupervisors": "顶级研究导师",
+    "topSupervisorsDesc": "与您领域的顶尖研究人员建立联系。",
+    "viewAll": "查看全部",
+    "publications": "篇论文",
+    "citations": "次引用",
+    "viewProfile": "查看资料",
+    "funding": "研究资助机会",
+    "fundingDesc": "发现资助金、奖学金和研究项目资金。",
+    "amount": "金额",
+    "deadline": "截止日期",
+    "learnMore": "了解更多",
+    "aiTools": "AI研究工具",
+    "aiToolsDesc": "利用我们的AI工具加速您的研究之旅。",
+    "tools": {
+      "matcher": "查找与您研究兴趣匹配的导师和实验室",
+      "grantWriter": "AI辅助撰写研究资助提案",
+      "publications": "分析出版趋势并寻找合作机会"
+    }
+  },
+  "faqs": {
+    "title": "常见问题",
+    "subtitle": "查找关于奖学金、申请和留学的常见问题答案。",
+    "searchPlaceholder": "搜索问题...",
+    "categories": {
+      "all": "全部",
+      "general": "常规",
+      "scholarships": "奖学金",
+      "applications": "申请",
+      "visas": "签证",
+      "financial": "财务"
+    },
+    "stillHaveQuestions": "还有问题？",
+    "stillHaveQuestionsDesc": "找不到您想要的答案？联系我们的支持团队。",
+    "contactUs": "联系我们"
+  },
+  "vision": {
+    "title": "我们的2040愿景",
+    "subtitle": "构建全球最全面的AI驱动教育生态系统",
+    "roadmap": "我们的路线图",
+    "milestones": "关键里程碑",
+    "competitiveAdvantages": "竞争优势",
+    "joinJourney": "加入我们的旅程",
+    "joinJourneyDesc": "成为全球教育未来的参与者"
+  },
+  "auth": {
+    "login": {
+      "title": "欢迎回来",
+      "subtitle": "登录您的账户",
+      "email": "电子邮件",
+      "password": "密码",
+      "submit": "登录",
+      "forgot": "忘记密码？",
+      "noAccount": "没有账户？",
+      "register": "注册"
+    },
+    "register": {
+      "title": "创建账户",
+      "subtitle": "加入我们的全球奖学金社区",
+      "name": "全名",
+      "email": "电子邮件",
+      "password": "密码",
+      "confirmPassword": "确认密码",
+      "submit": "创建账户",
+      "hasAccount": "已有账户？",
+      "login": "登录"
+    }
+  },
+  "profile": {
+    "title": "我的资料",
+    "edit": "编辑资料",
+    "save": "保存更改",
+    "academic": {
+      "title": "学术信息",
+      "degree": "当前学位",
+      "field": "研究领域",
+      "gpa": "GPA",
+      "university": "大学"
+    },
+    "preferences": {
+      "title": "偏好设置",
+      "countries": "首选国家",
+      "interests": "兴趣",
+      "languages": "语言"
+    }
+  },
+  "common": {
+    "loading": "加载中...",
+    "error": "出了点问题",
+    "retry": "重试",
+    "save": "保存",
+    "cancel": "取消",
+    "delete": "删除",
+    "edit": "编辑",
+    "view": "查看",
+    "close": "关闭",
+    "back": "返回",
+    "next": "下一步",
+    "previous": "上一步",
+    "showMore": "显示更多",
+    "showLess": "显示更少",
+    "noResults": "未找到结果",
+    "pageNotFound": "页面未找到",
+    "goHome": "返回首页",
+    "darkMode": "深色模式",
+    "lightMode": "浅色模式",
+    "language": "语言"
+  },
+  "footer": {
+    "about": "关于 GlobalScholar AI",
+    "aboutText": "通过AI匹配和全面资源，将学生与全球奖学金机会联系起来。",
+    "quickLinks": "快速链接",
+    "resourcesHeading": "资源",
+    "legal": "法律",
+    "privacy": "隐私政策",
+    "terms": "服务条款",
+    "contact": "联系我们",
+    "newsletter": "通讯",
+    "newsletterText": "获取最新奖学金信息",
+    "emailPlaceholder": "输入您的电子邮件",
+    "subscribe": "订阅",
+    "copyright": "© 2026 GlobalScholar AI. 保留所有权利。",
+    "admin": "管理员",
+    "madeWith": "用心打造",
+    "forStudents": "为全球学生服务",
+    "platform": {
+      "scholarshipSearch": "奖学金搜索",
+      "universityDirectory": "大学目录",
+      "aiTools": "AI工具",
+      "researchHub": "研究中心",
+      "rankings": "排名"
+    },
+    "resources": {
+      "aiMatcher": "AI奖学金匹配",
+      "aiDocuments": "AI文档分析",
+      "aiCareer": "AI职业预测",
+      "visaGuide": "签证指南",
+      "faqs": "常见问题"
+    },
+    "countries": {
+      "us": "美国",
+      "uk": "英国",
+      "germany": "德国",
+      "canada": "加拿大",
+      "australia": "澳大利亚"
+    },
+    "company": {
+      "about": "关于我们",
+      "vision": "我们的愿景",
+      "contact": "联系我们",
+      "privacy": "隐私政策",
+      "terms": "服务条款"
+    },
+    "headings": {
+      "platform": "奖学金搜索",
+      "resources": "AI奖学金匹配",
+      "countries": "美国",
+      "company": "关于我们"
+    }
+  }
+}
